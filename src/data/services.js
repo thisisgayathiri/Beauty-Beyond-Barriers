@@ -3,32 +3,32 @@ const services = [
     {
         "id": 1,
         "name": "Hairstyling",
-        "image": "hairstyle.png"
+        "image": "/images/hairstyle.png"
     },
     {
         "id": 2,
         "name": "Makeup",
-        "image": "makeup.png"
+        "image": "/images/makeup.png"
     },
     {
         "id": 3,
         "name": "Facial",
-        "image": "facial.png"
+        "image": "/images/facial.png"
     },
     {
         "id": 4,
         "name": "Waxing",
-        "image": "waxing.png"
+        "image": "/images/waxing.png"
     },
     {
         "id": 5,
         "name": "Nails",
-        "image": "nails.png"
+        "image": "/images/nails.png"
     },
     {
         "id": 6,
         "name": "Massage",
-        "image": "massage.png"
+        "image": "/images/massage.png"
     }
 ]
 
