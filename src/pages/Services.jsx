@@ -1,11 +1,13 @@
 import React from "react";
 import services from "../data/services";
+import {Redirect} from 'react-router-dom';
 
 
 function Services() {
+ //const history = useNavigate();
 
   const handleClick = () => {
-    console.log("Clicked");
+    window.location = '/salons';
   }
 
 
@@ -19,8 +21,9 @@ function Services() {
         {services.map((service, index) =>
           <li key={service.id}>
             <div>
-              <img width="70px" src={service.image} onClick={handleClick} />
+             <a><img width="70px" src={service.image} onClick={handleClick} /> 
               {service.name}
+              </a> 
             </div>
           </li>
         )}
