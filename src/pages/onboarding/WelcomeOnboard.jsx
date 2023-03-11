@@ -1,4 +1,4 @@
-import { ArrowRightOutlined, RightCircleTwoTone } from "@ant-design/icons";
+import { RightCircleTwoTone } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import React from "react";
