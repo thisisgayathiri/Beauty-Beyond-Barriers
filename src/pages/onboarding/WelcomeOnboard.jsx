@@ -43,6 +43,7 @@ const WelcomeOnboard = () => {
             padding: "0 10% 20px 10%",
             textAlign: "center",
             color: COLORS.SECONDARY,
+            fontWeight: 500
           }}
         >
           Discover beauty services and professionals near you
@@ -50,7 +51,7 @@ const WelcomeOnboard = () => {
       </Row>
 
       <Row justify={"center"}>
-        <NavLink>
+        <NavLink to='/sign-up'>
           <RightCircleTwoTone
             style={{ fontSize: "50px" }}
             twoToneColor={COLORS.PRIMARY}

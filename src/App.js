@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Salons from "./pages/Salons";
 import WelcomeOnboard from "./pages/onboarding/WelcomeOnboard";
+import SignUp from "./pages/onboarding/SignUp";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<WelcomeOnboard />} />
             <Route path="/services" element={<Services />} />
             <Route path="/salons" element={<Salons />} />
+            <Route path="/sign-up" element={ <SignUp />} />
           </Routes>
         </BrowserRouter>
         ,
