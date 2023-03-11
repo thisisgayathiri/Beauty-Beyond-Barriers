@@ -1,4 +1,5 @@
-[
+
+const services = [
     {
         "id": 1,
         "name": "Hairstyling",
@@ -30,3 +31,5 @@
         "image": "massage.png"
     }
 ]
+
+export default services;
