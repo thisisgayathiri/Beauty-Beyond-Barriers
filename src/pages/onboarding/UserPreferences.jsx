@@ -1,4 +1,5 @@
 import React from "react";
+import Preferences from "../common/Preferences";
 import SubTitleHeader from "../common/SubTitleHeader";
 
 import TitleHeader from "../common/TitleHeader";
@@ -14,6 +15,8 @@ const UserPreferences = () => {
       <TitlePreviousPage showBack={false} showSkip={true} />
       <TitleHeader title="Tell us your preferences" />
       <SubTitleHeader subTitle="And we'll help you find best services near you" />
+
+      <Preferences />
     </div>
   );
 };
