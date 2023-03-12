@@ -7,6 +7,7 @@ import WelcomeOnboard from "./pages/onboarding/WelcomeOnboard";
 import SignUp from "./pages/onboarding/SignUp";
 import UserPreferences from "./pages/onboarding/UserPreferences";
 import Confirmation from "./pages/Confirmation";
+import Appointment from "./pages/Appointment";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/sign-up" element={ <SignUp />} />
             <Route path='/user-preferences' element={ <UserPreferences />}/>
             <Route path='/confirmation' element={<Confirmation />}/>
+            <Route path='/appointment' element={<Appointment />}/>
           </Routes>
         </BrowserRouter>
         ,
