@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- Ideas -->
+What are you looking for ? 
+1. Hair style
+2. Nail treatment
+3. Facial care
+4. Skin care
+5. Tanning
+6. Aroma Therapy
+7. Spa
