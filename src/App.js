@@ -6,6 +6,7 @@ import Salons from "./pages/Salons";
 import WelcomeOnboard from "./pages/onboarding/WelcomeOnboard";
 import SignUp from "./pages/onboarding/SignUp";
 import UserPreferences from "./pages/onboarding/UserPreferences";
+import Confirmation from "./pages/Confirmation";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/salons" element={<Salons />} />
             <Route path="/sign-up" element={ <SignUp />} />
             <Route path='/user-preferences' element={ <UserPreferences />}/>
+            <Route path='/confirmation' element={<Confirmation />}/>
           </Routes>
         </BrowserRouter>
         ,
