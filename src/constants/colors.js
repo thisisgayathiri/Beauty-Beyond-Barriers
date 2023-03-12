@@ -2,7 +2,7 @@ const COLORS = Object.freeze({
   PRIMARY: '#E88B73ff' ,// salmon
   SECONDARY: '#303030ff', // dark- jet
   PRIMARY_DARK: '#E2836Aff',  // burnt-sienna
-  WHITE: 'FFFFFFff',
+  WHITE: '#FFFFFFff',
   PRIMARY_LIGHT: '#FEFCFBff',
 })
 
