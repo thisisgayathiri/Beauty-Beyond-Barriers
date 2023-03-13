@@ -5,11 +5,13 @@ import Text from "antd/es/typography/Text";
 import { COLORS } from "../constants/colors";
 import { DatePicker, Space } from 'antd';
 import TitleHeader from "./common/TitleHeader";
+import { useNavigate } from "react-router";
 
 function Appointment() {
   const [showSlots, setShowSlots] = useState(false);
   const [slotsClicked, setSlotsCliked] = useState(false);
   const [rclicked, setRClicked] = useState(false);
+  const navigate = useNavigate();
 
   const onDateChange = () => {
     setShowSlots(true);
@@ -21,6 +23,10 @@ function Appointment() {
 
   const onRecurringClicked = () => {
     setRClicked(true);
+  }
+
+  const confirm = () => {
+    navigate("/confirmation");
   }
 
   return (
@@ -176,14 +182,17 @@ function Appointment() {
 
 
       <Button
+        onClick= {confirm}
         size="large"
         htmlType="submit"
+     
         style={{
           marginTop: "80px",
           backgroundColor: COLORS.PRIMARY,
           color: COLORS.PRIMARY_LIGHT,
           fontWeight: 500,
           borderColor: COLORS.PRIMARY_LIGHT,
+         
         }}
         className="login-form-button"
       >
