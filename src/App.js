@@ -24,13 +24,13 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomeOnboard />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/salons" element={<Salons />} />
             <Route path="/sign-up" element={ <SignUp />} />
             <Route path='/user-preferences' element={ <UserPreferences />}/>
+            <Route path="/services" element={<Services />} />
+            <Route path="/salons" element={<Salons />} />
+            <Route path='/chat' element={<ChatWindow/>}/>
             <Route path='/confirmation' element={<Confirmation />}/>
             <Route path='/appointment' element={<Appointment />}/>
-            <Route path='/chat' element={<ChatWindow/>}/>
           </Routes>
         </BrowserRouter>
         ,

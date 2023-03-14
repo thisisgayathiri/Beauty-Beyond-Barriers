@@ -15,7 +15,7 @@ function Confirmation() {
 
             <Row justify={"center"}>
                 <Image
-                    style={{ padding: "30px" }}
+                    style={{ padding: "50px" , width: "200px", height: "300px", borderRadius: "400px 200px"}}
                     preview={{ visible: false }}
                     width={200}
                     src="https://timesofindia.indiatimes.com/photo/95103361/95103361.jpg?v=3"
@@ -33,7 +33,7 @@ function Confirmation() {
                         color: COLORS.SECONDARY,
                     }}
                 >
-                    Appointment confirmed!
+                    We've got you confirmed for your appointment!
                 </Title>
             </Row>
 
@@ -42,13 +42,27 @@ function Confirmation() {
                 <Title
                     level={3}
                     style={{
-                        padding: "0 10% 20px 10%",
+                        padding: "0 0 0px 0px",
                         textAlign: "center",
                         color: COLORS.SECONDARY,
                         fontWeight: 500
                     }}
                 >
-                    You've successfully made an appointment for Hairstyling for Mar 25, 2023 at 11:00
+                    Mar 25, 2023 | 11:00 AM
+                </Title>
+            </Row>
+
+            <Row justify={"center"}>
+                <Title
+                    level={3}
+                    style={{
+                padding:"0px",
+                        textAlign: "center",
+                        color: COLORS.SECONDARY,
+                        fontWeight: 400
+                    }}
+                >
+                      Studio 11 | ATX South Branch
                 </Title>
             </Row>
 
