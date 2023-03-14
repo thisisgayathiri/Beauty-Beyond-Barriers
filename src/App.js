@@ -8,6 +8,7 @@ import SignUp from "./pages/onboarding/SignUp";
 import UserPreferences from "./pages/onboarding/UserPreferences";
 import Confirmation from "./pages/Confirmation";
 import Appointment from "./pages/Appointment";
+import ChatWindow from "./pages/chat/ChatWindow";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path='/user-preferences' element={ <UserPreferences />}/>
             <Route path='/confirmation' element={<Confirmation />}/>
             <Route path='/appointment' element={<Appointment />}/>
+            <Route path='/chat' element={<ChatWindow/>}/>
           </Routes>
         </BrowserRouter>
         ,

@@ -66,7 +66,7 @@ function Appointment() {
       <TitleHeader title="Professional" />
       <Row style={{ padding: "20px" }}>
         <Avatar style={{ height: "50px", width: "50px" }} src="https://www.betterteam.com/images/hair-stylist-job-description-6010x4012-20201120.jpeg?crop=21:16,smart&width=420&dpr=2" />
-        <Text style={{ padding: "10px" }}>Pheobe</Text>
+        <Text style={{ padding: "10px" }}>Tracy</Text>
       </Row>
 
 
