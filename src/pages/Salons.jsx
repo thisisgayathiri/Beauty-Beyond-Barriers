@@ -1,10 +1,11 @@
 import React from "react";
 
+
 function Salons() {
   return (
     <div>
 
-      Salons
+      Salons Screen
 
 
     </div>
