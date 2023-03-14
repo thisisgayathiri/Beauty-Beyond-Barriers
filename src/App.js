@@ -10,6 +10,7 @@ import Confirmation from "./pages/Confirmation";
 import Appointment from "./pages/Appointment";
 import ChatWindow from "./pages/chat/ChatWindow";
 import Services from "./pages/services/Services";
+import SpeechRecognizer from "./components/speech/SpeechRecognizer";
 
 
 function App() {
@@ -32,8 +33,11 @@ function App() {
             <Route path='/chat' element={<ChatWindow/>}/>
             <Route path='/confirmation' element={<Confirmation />}/>
             <Route path='/appointment' element={<Appointment />}/>
+            <Route path='/speech' element={<SpeechRecognizer/>}/>
           </Routes>
         </BrowserRouter>
+
+        
         ,
       </div>
     </ConfigProvider>

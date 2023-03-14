@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { COLORS } from "../../constants/colors";
 import { useEffect, useState } from "react";
 import LandingPage from "../common/LandingPage";
+import SpeechRecognizer from "../../components/speech/SpeechRecognizer";
 
 function getWindowSize() {
   const { innerWidth, innerHeight } = window;
@@ -89,6 +90,8 @@ const WelcomeOnboard = () => {
           </Row>
         </div>
       )}
+
+      <SpeechRecognizer></SpeechRecognizer>
 
       {!isMobileSite && <LandingPage />}
     </div>
