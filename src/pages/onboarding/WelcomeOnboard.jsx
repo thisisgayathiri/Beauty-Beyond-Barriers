@@ -5,7 +5,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { COLORS } from "../../constants/colors";
 import { useEffect, useState } from "react";
-import LandingPage from "../common/LandingPage";
+import LandingPage from "../../components/common/LandingPage";
 import SpeechRecognizer from "../../components/speech/SpeechRecognizer";
 
 function getWindowSize() {

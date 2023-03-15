@@ -2,9 +2,9 @@ import { Button, Form, Input } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { COLORS } from "../../constants/colors";
-import SubTitleHeader from "../common/SubTitleHeader";
-import TitleHeader from "../common/TitleHeader";
-import TitlePreviousPage from "../common/TitlePreviousPage";
+import SubTitleHeader from "../../components/common/SubTitleHeader";
+import TitleHeader from "../../components/common/TitleHeader";
+import TitlePreviousPage from "../../components/common/TitlePreviousPage";
 import "./Signup.css";
 
 const SignUp = () => {

@@ -2,11 +2,11 @@ import { Button } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { COLORS } from "../../constants/colors";
-import Preferences from "../common/Preferences";
-import SubTitleHeader from "../common/SubTitleHeader";
+import Preferences from "../../components/common/Preferences";
+import SubTitleHeader from "../../components/common/SubTitleHeader";
 
-import TitleHeader from "../common/TitleHeader";
-import TitlePreviousPage from "../common/TitlePreviousPage";
+import TitleHeader from "../../components/common/TitleHeader";
+import TitlePreviousPage from "../../components/common/TitlePreviousPage";
 
 const UserPreferences = () => {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import { COLORS } from "../constants/colors";
 import { DatePicker, Space } from 'antd';
-import TitleHeader from "./common/TitleHeader";
+import TitleHeader from "../components/common/TitleHeader";
 import { useNavigate } from "react-router";
 
 function Appointment() {

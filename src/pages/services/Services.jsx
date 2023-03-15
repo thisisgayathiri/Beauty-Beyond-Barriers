@@ -1,10 +1,6 @@
 import React from "react";
-import services from "../../data/services";
 import { useNavigate } from "react-router-dom";
 import ServiceOptions from "./ServiceOptions";
-import TitlePreviousPage from "../common/TitlePreviousPage";
-import TitleHeader from "../common/TitleHeader";
-import SubTitleHeader from "../common/SubTitleHeader";
 import { Col, Row } from "antd";
 import { COLORS } from "../../constants/colors";
 import Location from "../../components/Location";
@@ -50,7 +46,11 @@ function Services() {
 
       <ServiceOptions />
 
-      <Row>
+      <Row
+        style={{
+          position: "relative",
+        }}
+      >
         <Col>
           <Title
             style={{
@@ -64,7 +64,13 @@ function Services() {
             Best salons picked for you
           </Title>
         </Col>
-        <Col push={5}>
+        <Col
+          style={{
+            position: "absolute",
+            right: "20px",
+            top: "0px",
+          }}
+        >
           <Title
             style={{
               padding: "0 0px 0px 0px",
@@ -79,6 +85,44 @@ function Services() {
       </Row>
 
       <Salons />
+
+      <Row
+        style={{
+          position: "relative",
+        }}
+      >
+        <Col>
+          <Title
+            style={{
+              padding: "0 20px 0px 20px",
+              textAlign: "left",
+              fontWeight: 600,
+              color: COLORS.SECONDARY,
+            }}
+            level={5}
+          >
+            Trained stylists at your doorstep
+          </Title>
+        </Col>
+        <Col
+          style={{
+            position: "absolute",
+            right: "20px",
+            top: "0px",
+          }}
+        >
+          <Title
+            style={{
+              padding: "0 0px 0px 0px",
+              fontWeight: 400,
+              color: COLORS.SECONDARY,
+            }}
+            level={5}
+          >
+            More
+          </Title>
+        </Col>
+      </Row>
     </div>
   );
 }
