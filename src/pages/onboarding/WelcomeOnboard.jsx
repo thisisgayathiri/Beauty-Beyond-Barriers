@@ -91,8 +91,6 @@ const WelcomeOnboard = () => {
         </div>
       )}
 
-      <SpeechRecognizer></SpeechRecognizer>
-
       {!isMobileSite && <LandingPage />}
     </div>
   );
