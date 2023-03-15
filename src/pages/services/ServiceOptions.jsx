@@ -38,7 +38,6 @@ const ServiceOptions = ({}) => {
               flexDirection: 'column',
               alignItems: 'center',
               borderColor: item.isSelected ? "darkgray" : "",
-              borderWidth: item.isSelected ? "thick" : "",
             }}
             cover={<img
               style={{ width: "50px", margin: '10px 0 0 0',  textAlign: 'center', }}
