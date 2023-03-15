@@ -12,7 +12,6 @@ import ChatWindow from "./pages/chat/ChatWindow";
 import Services from "./pages/services/Services";
 import SpeechRecognizer from "./components/speech/SpeechRecognizer";
 
-
 function App() {
   return (
     <ConfigProvider
@@ -36,9 +35,6 @@ function App() {
             <Route path='/speech' element={<SpeechRecognizer/>}/>
           </Routes>
         </BrowserRouter>
-
-        
-        ,
       </div>
     </ConfigProvider>
   );
