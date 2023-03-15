@@ -1,0 +1,15 @@
+.ant-card-body {
+    padding: 0px !important; 
+
+    display: flex;
+    align-items: center;
+}
+
+.ant-spin-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.list-item-icon {
+    padding-top: 5px;
+}
