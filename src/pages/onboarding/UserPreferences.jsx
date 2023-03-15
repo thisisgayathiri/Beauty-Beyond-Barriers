@@ -37,6 +37,12 @@ const UserPreferences = () => {
           color: COLORS.PRIMARY_LIGHT,
           fontWeight: 500,
           borderColor: COLORS.PRIMARY_LIGHT,
+
+          position: 'absolute',
+          bottom: '20px',
+          left: 0,
+          margin: '0 10px 0 10px',
+          width: '95%'
         }}
         className="login-form-button"
       >
