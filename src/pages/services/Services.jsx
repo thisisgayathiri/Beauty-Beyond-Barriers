@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ServiceOptions from "./ServiceOptions";
-import { Col, Row } from "antd";
+import { Affix, Col, Row, Tabs } from "antd";
 import { COLORS } from "../../constants/colors";
 import Location from "../../components/Location";
 
@@ -9,6 +9,9 @@ import Title from "antd/es/typography/Title";
 import Salons from "../../components/Salons";
 import Stylists from "../../components/Stylists";
 import More from "../../components/common/More";
+import { AppstoreTwoTone, HeartTwoTone, RocketTwoTone, ScheduleTwoTone } from "@ant-design/icons";
+import menuItems from "../../data/menu";
+import './Services.css'
 
 function Services() {
   const navigate = useNavigate();
@@ -16,6 +19,15 @@ function Services() {
   const confirm = () => {
     navigate("/salons");
   };
+
+  const getIcon = (icon) => {
+    if(_.isEqual(icon, 'explore'))
+      return <AppstoreTwoTone twoToneColor={COLORS.PRIMARY} />
+    else if(_.isEqual(icon, 'bookings'))
+      return <ScheduleTwoTone twoToneColor={COLORS.PRIMARY} />
+    else if(_.isEqual(icon, 'account'))
+      return <HeartTwoTone twoToneColor={COLORS.PRIMARY}/>
+  }
 
   return (
     <div
@@ -74,7 +86,7 @@ function Services() {
             top: "0px",
           }}
         >
-         <More navTo={'/'} />
+          <More navTo={"/"} />
         </Col>
       </Row>
 
@@ -105,10 +117,33 @@ function Services() {
             top: "0px",
           }}
         >
-          <More navTo={'/'} />
+          <More navTo={"/"} />
         </Col>
       </Row>
       <Stylists />
+
+      <Affix offsetBottom={0}>
+        <Tabs
+        style={{
+          backgroundColor: 'white',
+          padding: '0 40px',
+        }}
+          defaultActiveKey="2"
+          items={menuItems.map(({ name, icon, id}) => {
+            return {
+              label: (
+                <span style={{
+                  backgroundColor: 'white'
+                }}>
+                  {getIcon(icon)}
+                  {name}
+                </span>
+              ),
+              key: id,
+            };
+          })}
+        />
+      </Affix>
     </div>
   );
 }

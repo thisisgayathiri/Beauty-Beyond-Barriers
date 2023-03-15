@@ -48,9 +48,12 @@ const WelcomeOnboard = () => {
               <div
                 style={{
                   height: "60vh",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
-                Image here
+                <img width={'300px'} height= {'300px'} src="/images/logo.png" alt="logo" />
               </div>
             </Col>
           </Row>
