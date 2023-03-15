@@ -1,27 +1,27 @@
 const salons = [
     {
         "id": 1,
-        "name": "Hairstyling",
-        "image": "/images/hairstyle.png",
-        "isSelected": false
+        "name": "Splash",
+        "image": "/images/salons/a.jpg",
+        "location": '1.5km away'
     },
     {
         "id": 2,
-        "name": "Makeup",
-        "image": "/images/makeup.png",
-        "isSelected": false
+        "name": "B&B",
+        "image": "/images/salons/b.jpg",
+        "location": '1.5km away'
     },
     {
         "id": 3,
-        "name": "Facial",
-        "image": "/images/facial.png",
-        "isSelected": false
+        "name": "Zudio",
+        "image": "/images/salons/c.jpg",
+        "location": '1.5km away'
     },
     {
         "id": 4,
-        "name": "Waxing",
-        "image": "/images/waxing.png",
-        "isSelected": false
+        "name": "Femina",
+        "image": "/images/salons/d.jpg",
+        "location": '1.5km away'
     },
 ]
 

@@ -6,7 +6,10 @@ import { COLORS } from "../../constants/colors";
 import Location from "../../components/Location";
 
 import Title from "antd/es/typography/Title";
-import Salons from "../Salons";
+import Salons from "../../components/Salons";
+import Stylists from "../../components/Stylists";
+import More from "../../components/common/More";
+
 function Services() {
   const navigate = useNavigate();
 
@@ -71,16 +74,7 @@ function Services() {
             top: "0px",
           }}
         >
-          <Title
-            style={{
-              padding: "0 0px 0px 0px",
-              fontWeight: 400,
-              color: COLORS.SECONDARY,
-            }}
-            level={5}
-          >
-            More
-          </Title>
+         <More navTo={'/'} />
         </Col>
       </Row>
 
@@ -111,18 +105,10 @@ function Services() {
             top: "0px",
           }}
         >
-          <Title
-            style={{
-              padding: "0 0px 0px 0px",
-              fontWeight: 400,
-              color: COLORS.SECONDARY,
-            }}
-            level={5}
-          >
-            More
-          </Title>
+          <More navTo={'/'} />
         </Col>
       </Row>
+      <Stylists />
     </div>
   );
 }

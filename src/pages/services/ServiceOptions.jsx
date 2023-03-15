@@ -33,17 +33,25 @@ const ServiceOptions = ({}) => {
             onClick={() => click(item.id)}
             style={{
               padding: "0px 10px",
+              display: 'flex',
+              width: '100px',
+              flexDirection: 'column',
+              alignItems: 'center',
               borderColor: item.isSelected ? "darkgray" : "",
               borderWidth: item.isSelected ? "thick" : "",
             }}
             cover={<img
-              style={{ width: "75px", height: "75px" }}
+              style={{ width: "50px", margin: '10px 0 0 0',  textAlign: 'center', }}
               src={item.image}
             ></img>}
           >
-            <Meta style={{
-              textAlign: 'center'
-            }} title={item.name} />
+            <p style={{
+              textAlign: 'center',
+              padding: 0,
+              margin: '5px'
+            }}>
+            {item.name}
+            </p>
           </Card>
         </List.Item>
       )}
