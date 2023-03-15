@@ -1,21 +1,22 @@
 import React from "react";
 import services from "../../data/services";
-import {Redirect, useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import ServiceOptions from "./ServiceOptions";
 import TitlePreviousPage from "../common/TitlePreviousPage";
 import TitleHeader from "../common/TitleHeader";
 import SubTitleHeader from "../common/SubTitleHeader";
-import { Button } from "antd";
+import { Col, Row } from "antd";
 import { COLORS } from "../../constants/colors";
+import Location from "../../components/Location";
 
-
+import Title from "antd/es/typography/Title";
+import Salons from "../Salons";
 function Services() {
   const navigate = useNavigate();
 
-
   const confirm = () => {
     navigate("/salons");
-  }
+  };
 
   return (
     <div
@@ -23,30 +24,61 @@ function Services() {
         height: "100vh",
       }}
     >
-      <TitlePreviousPage showBack={false} showSkip={true} />
-      <TitleHeader title="What you are looking you?" />
-      <SubTitleHeader subTitle="And we'll help you find best services near you" />
+      <Row
+        gutter={24}
+        style={{
+          margin: "10px",
+        }}
+      >
+        <Col span={24}>
+          <Location location="3604 Chestnut, Philadelphia" />
+        </Col>
+      </Row>
+
+      <Title
+        style={{
+          padding: "0 20px 0px 20px",
+          marginTop: "30px",
+          textAlign: "left",
+          fontWeight: 600,
+          color: COLORS.SECONDARY,
+        }}
+        level={5}
+      >
+        Sandra, what are you looking for?
+      </Title>
 
       <ServiceOptions />
 
-      <Button
-        onClick= {confirm}
-        size="large"
-        htmlType="submit"
-     
-        style={{
-          marginTop: "50px",
-          backgroundColor: COLORS.PRIMARY,
-          color: COLORS.PRIMARY_LIGHT,
-          fontWeight: 500,
-          width: "150px",
-          borderColor: COLORS.PRIMARY_LIGHT,
-         
-        }}
-        className="login-form-button"
-      >
-        Continue
-      </Button>
+      <Row>
+        <Col>
+          <Title
+            style={{
+              padding: "0 20px 0px 20px",
+              textAlign: "left",
+              fontWeight: 600,
+              color: COLORS.SECONDARY,
+            }}
+            level={5}
+          >
+            Best salons picked for you
+          </Title>
+        </Col>
+        <Col push={5}>
+          <Title
+            style={{
+              padding: "0 0px 0px 0px",
+              fontWeight: 400,
+              color: COLORS.SECONDARY,
+            }}
+            level={5}
+          >
+            More
+          </Title>
+        </Col>
+      </Row>
+
+      <Salons />
     </div>
   );
 }

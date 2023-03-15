@@ -41,14 +41,13 @@ const data = [
 const Preferences = ({}) => {
   return (
     <List
-    
       grid={{
         gutter: 3,
       }}
       dataSource={data}
       renderItem={(item) => (
         <List.Item justify="space-around">
-          <Card style={{
+          <Card hoverable style={{
             padding: '0px 10px',
           }}>
             <span className='list-item-icon'>{getComponentbyIcon(item.icon)}</span>
