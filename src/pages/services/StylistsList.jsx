@@ -4,7 +4,7 @@ import {
   SortAscendingOutlined,
   StarTwoTone,
 } from "@ant-design/icons";
-import { Badge, Card, Col, DatePicker, Row, Select, Space } from "antd";
+import { Badge, Card, Col, DatePicker, Row, Select, Space, Tag } from "antd";
 import React from "react";
 import TabMenu from "../../components/common/TabMenu";
 import Location from "../../components/Location";
@@ -54,7 +54,7 @@ const StylistsList = () => {
                 style={{ height: "100%" }}
                 alt="stylist"
                 src={"/images/stylists/" + s.avatar}
-              />{" "}
+              />
             </div>
           }
         >
@@ -82,6 +82,19 @@ const StylistsList = () => {
                 />
                 <span>{s.rating}</span>
               </Col>
+            </Row>
+            <Row>
+              <span
+                style={{
+                  marginBottom: "10px",
+                }}
+              >
+                {s.available ? (
+                  <Tag color="#23A457">Available</Tag>
+                ) : (
+                  <Tag color="#F15E63">Busy</Tag>
+                )}
+              </span>
             </Row>
           </div>
         </Card>
