@@ -33,7 +33,7 @@ const SpeechRecognizer = () => {
   if (transcript.toLowerCase().includes("search")) {
     setTimeout(() => {
       navigate("/salons");
-    }, 1000);
+    }, 2000);
   }
 
   function openModal() {
@@ -67,11 +67,26 @@ const SpeechRecognizer = () => {
         contentLabel="Speech Modal"
       >
         <div
-          style={{ color: "black", display: transcript == "" ? "" : "none" }}
+          style={{ fontWeight: "bold", fontFamily: "Poppins", color: "black", display: transcript == "" ? "" : "none" }}
         >
           Listening..
+
+
         </div>
-        <div style={{ color: "black" }}>{transcript}</div>
+        <div style={{ fontStyle: "italic", paddingTop: "5px", fontFamily: "Poppins", color: "black", display: transcript == "" ? "" : "none" }} >
+          Try saying, search for salons
+        </div>
+
+        <div style={{ display: transcript != "" ? "" : "none" }}>
+          <img
+            onClick={openModal}
+
+            src="/images/mic.svg"
+          />
+        </div>
+        <div style={{ color: "black" }}>
+
+          {transcript}</div>
       </Modal>
     </div>
   );
