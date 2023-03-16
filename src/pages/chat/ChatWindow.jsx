@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import  './layout.css';
 
 function ChatWindow() {
 
 
+  const [text, setText] = useState('');
+
+  const [message, setMessage] = useState('');
+
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+};
+
+
+  const onMessageSend = () => {
+          setText(message);
+          setMessage('');
+  }
 
     return (
 
@@ -31,13 +44,13 @@ function ChatWindow() {
                 
               </div>
               <div class="message other-message float-right">
-                Good Morning Erica, How may I help you?
+                Good Morning Sandra, How may I help you?
               </div>
             </li>
             
             <li>
               <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i>Erica</span>
+                <span class="message-data-name"><i class="fa fa-circle online"></i>Sandra</span>
                 <span class="message-data-time">10:12 AM, Today</span>
               </div>
               <div class="message my-message">
@@ -58,34 +71,52 @@ function ChatWindow() {
             
             <li>
               <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Erica</span>
-                <span class="message-data-time">10:20 AM, Today</span>
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Sandra</span>
+                <span class="message-data-time">10:16 AM, Today</span>
               </div>
               <div class="message my-message">
-                Yes. I prefer laser cut. The present muchroom cut does not allow me to make a french plait or french roll. And I want a hightlighting dye also.
+                Yes. I prefer laser cut. The present muchroom cut does not allow me to make a french plait or french roll.
               </div>
             </li>
             
-            {/* <li>
+
+            { text=='' ? null :
+
+            <li >
               <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Tracy</span>
-                <span class="message-data-time">10:31 AM, Today</span>
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Sandra</span>
+                <span class="message-data-time">10:18 AM, Today</span>
               </div>
+              <div class="message my-message">
+                {text}
+              </div>
+            </li>
+
+}
+
+            
+            <div class="loading">
+              Tracy is typing
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+              
              
               <i class="fa fa-circle online"></i>
             <span className=" online" style={{"color" : "#AED2A6"}}></span>
             <span className=" online" style={{"color" : "#DAE9DA"}}></span>
-            </li> */}
+             
             
           </ul>
           
         </div> 
         
         <div class="chat-message clearfix">
-          <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+          <textarea onChange={handleChange} value={message} name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
                   
           
-          <button>Send</button>
+          <button onClick={onMessageSend}>Send</button>
   
         </div>
         
