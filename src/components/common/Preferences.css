@@ -13,3 +13,11 @@
 .list-item-icon {
     padding-top: 5px;
 }
+
+.list-item-icon-text {
+    padding-right: 10px;
+}
+
+.preferences-list .ant-spin-container .ant-row {
+    gap: 10px;
+}

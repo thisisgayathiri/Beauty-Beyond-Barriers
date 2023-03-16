@@ -5,7 +5,7 @@ const menuItems = [
         icon: 'explore'
     },
     {
-        name: 'Bookings',
+        name: 'Appointments',
         id: '2',
         icon: 'bookings'
     },
