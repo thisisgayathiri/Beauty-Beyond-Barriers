@@ -7,6 +7,7 @@ import {
   ScheduleTwoTone,
 } from "@ant-design/icons";
 import { COLORS } from "../../constants/colors";
+import "./TabMenu.css";
 
 const TabMenu = () => {
   const getIcon = (icon) => {
@@ -24,6 +25,7 @@ const TabMenu = () => {
         style={{
           backgroundColor: "white",
           padding: "0 20px",
+          alignItems: "center",
         }}
         defaultActiveKey="2"
         items={menuItems.map(({ name, icon, id }) => {

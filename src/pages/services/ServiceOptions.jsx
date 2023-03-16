@@ -25,7 +25,7 @@ const ServiceOptions = ({}) => {
       grid={{
         gutter: 12,
       }}
-      style={{ marginLeft: "20px" }}
+      style={{ marginLeft: "10px" }}
       dataSource={details}
       renderItem={(item) => (
         <List.Item>
