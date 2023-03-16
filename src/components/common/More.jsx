@@ -4,7 +4,7 @@ import Title from "antd/es/typography/Title";
 import { COLORS } from "../../constants/colors";
 import { NavLink } from "react-router-dom";
 
-const More = (navTo) => {
+const More = ({navTo}) => {
   return (
     <NavLink to={navTo}>
       <Title

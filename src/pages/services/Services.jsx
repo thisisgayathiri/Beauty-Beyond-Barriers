@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import ServiceOptions from "./ServiceOptions";
 import { Col, Row } from "antd";
 import { COLORS } from "../../constants/colors";
@@ -14,12 +13,6 @@ import './Services.css'
 import TabMenu from "../../components/common/TabMenu";
 
 function Services() {
-  const navigate = useNavigate();
-
-  const confirm = () => {
-    navigate("/salons");
-  };
-
   return (
     <div
       style={{
@@ -77,7 +70,7 @@ function Services() {
             top: "0px",
           }}
         >
-          <More navTo={"/"} />
+          <More navTo="/salons" />
         </Col>
       </Row>
 
@@ -108,7 +101,7 @@ function Services() {
             top: "0px",
           }}
         >
-          <More navTo={"/"} />
+          <More navTo="/stylists" />
         </Col>
       </Row>
       <Stylists />

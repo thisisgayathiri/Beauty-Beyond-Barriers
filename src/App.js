@@ -10,13 +10,15 @@ import Appointment from "./pages/Appointment";
 import ChatWindow from "./pages/chat/ChatWindow";
 import Services from "./pages/services/Services";
 import SpeechRecognizer from "./components/speech/SpeechRecognizer";
+import SalonsList from "./pages/services/SalonsList";
+import StylistsList from "./pages/services/StylistsList";
 
 function App() {
   return (
     <ConfigProvider
       theme={{
         token: {
-          fontFamily: 'Poppins',
+          fontFamily: "Poppins",
         },
       }}
     >
@@ -24,13 +26,17 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<WelcomeOnboard />} />
-            <Route path="/sign-up" element={ <SignUp />} />
-            <Route path='/user-preferences' element={ <UserPreferences />}/>
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/user-preferences" element={<UserPreferences />} />
+
             <Route path="/services" element={<Services />} />
-            <Route path='/chat' element={<ChatWindow/>}/>
-            <Route path='/confirmation' element={<Confirmation />}/>
-            <Route path='/appointment' element={<Appointment />}/>
-            <Route path='/speech' element={<SpeechRecognizer/>}/>
+            <Route path="/salons" element={<SalonsList />} />
+            <Route path="/stylists" element={<StylistsList />} />
+
+            <Route path="/chat" element={<ChatWindow />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/appointment" element={<Appointment />} />
+            <Route path="/speech" element={<SpeechRecognizer />} />
           </Routes>
         </BrowserRouter>
       </div>
