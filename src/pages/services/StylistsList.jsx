@@ -180,10 +180,10 @@ const StylistsList = () => {
             <span className="badge">Virtual pre-consultation</span>
           </Badge>
           <Badge>
-            <span className="badge">At-home service</span>
+            <span className="badge">Trained</span>
           </Badge>
           <Badge>
-            <span className="badge">Trained</span>
+            <span className="badge">At-home service</span>
           </Badge>
         </Space>
       </Row>

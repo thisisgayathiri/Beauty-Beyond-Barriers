@@ -82,6 +82,7 @@ const SalonsList = () => {
             <Select
               defaultValue="Myself"
               options={[
+                { value: "Myself", label: "Myself" },
                 { value: "Mom", label: "Mom" },
                 { value: "Dad", label: "Dad" },
                 { value: "Pet", label: "Pet" },
