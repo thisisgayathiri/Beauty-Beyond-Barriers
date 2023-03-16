@@ -8,8 +8,22 @@ const Stylists = () => {
       <>
         <Card
           hoverable
-          style={{ width: "200px", display: "inline-block", margin: "0 10px"}}
-          cover={<img width={'100%'} height={'100%'} alt="salon" src={'/images/stylists/' + stylist.avatar} />}
+          style={{ width: "200px", display: "inline-block", margin: "0 10px" }}
+          cover={
+            <div
+              style={{
+                overflow: "hidden",
+                height: "200px",
+                backgroundColor: "#000000",
+              }}
+            >
+              <img
+                style={{ height: "100%" }}
+                alt="stylist"
+                src={"/images/stylists/" + stylist.avatar}
+              />
+            </div>
+          }
         >
           <span
             style={{
