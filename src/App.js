@@ -13,6 +13,7 @@ import SpeechRecognizer from "./components/speech/SpeechRecognizer";
 import SalonsList from "./pages/services/SalonsList";
 import StylistsList from "./pages/services/StylistsList";
 import StylistProfile from "./pages/stylist/StylistProfile";
+import Courses from "./pages/courses/Course";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/speech" element={<SpeechRecognizer />} />
+            <Route path="/courses" element ={<Courses/>} />
           </Routes>
         </BrowserRouter>
       </div>
