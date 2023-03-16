@@ -1,0 +1,15 @@
+.date-picker {
+    width: 100%;
+}
+
+.icon-container {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.badge {
+    background-color: #f6f6f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

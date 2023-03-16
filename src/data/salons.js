@@ -1,7 +1,7 @@
 const salons = [
     {
         "id": 1,
-        "name": "Splash",
+        "name": "Vurve",
         "image": "/images/salons/a.jpg",
         "location": '1.5km away'
     },
