@@ -18,88 +18,90 @@ import MyDatePicker from "../../components/common/MyDatePicker";
 const StylistsList = () => {
   const stylistsCard = _.map(stylists, (s) => {
     return (
-      <Badge.Ribbon text="Trained">
-        <Card
-          //   actions={[
-          //     <PhoneOutlined
-          //       style={{
-          //         fontSize: "20px",
-          //         rotate: "105deg",
-          //       }}
-          //     />,
-          //     <>
-          //       <Badge dot={true} status={'success'}>
-          //         <MessageOutlined
-          //           style={{
-          //             fontSize: "20px",
-          //           }}
-          //         />
-          //         ,
-          //       </Badge>
-          //     </>,
-          //     <HeartOutlined
-          //       style={{
-          //         fontSize: "20px",
-          //       }}
-          //     />,
-          //   ]}
-          cover={
-            <div
-              style={{
-                overflow: "hidden",
-                height: "200px",
-                backgroundColor: "#000000",
-              }}
-            >
-              <img
-                style={{ height: "100%" }}
-                alt="stylist"
-                src={"/images/stylists/" + s.avatar}
-              />
-            </div>
-          }
-        >
-          <div className="card-text-wrapper">
-            <Row>
-              <Col span={14}>
-                <Title className="card-title" level={5}>
-                  {s.name}
-                </Title>
-              </Col>
-              <Col
-                span={10}
+      <NavLink to="/profile-stylist">
+        <Badge.Ribbon text="Trained">
+          <Card
+            //   actions={[
+            //     <PhoneOutlined
+            //       style={{
+            //         fontSize: "20px",
+            //         rotate: "105deg",
+            //       }}
+            //     />,
+            //     <>
+            //       <Badge dot={true} status={'success'}>
+            //         <MessageOutlined
+            //           style={{
+            //             fontSize: "20px",
+            //           }}
+            //         />
+            //         ,
+            //       </Badge>
+            //     </>,
+            //     <HeartOutlined
+            //       style={{
+            //         fontSize: "20px",
+            //       }}
+            //     />,
+            //   ]}
+            cover={
+              <div
                 style={{
-                  alignItems: "center",
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  overflow: "hidden",
+                  height: "200px",
+                  backgroundColor: "#000000",
                 }}
               >
-                <StarTwoTone
-                  twoToneColor={COLORS.PRIMARY}
-                  style={{
-                    marginRight: "5px",
-                    height: "20px",
-                  }}
+                <img
+                  style={{ height: "100%" }}
+                  alt="stylist"
+                  src={"/images/stylists/" + s.avatar}
                 />
-                <span>{s.rating}</span>
-              </Col>
-            </Row>
-            <Row>
-              <span
-                style={{
-                  marginBottom: "10px",
-                }}
-              >
-                {s.available ? (
-                  <Tag color="#23A457">Available</Tag>
-                ) : (
-                  <Tag color="#F15E63">Busy</Tag>
-                )}
-              </span>
-            </Row>
-          </div>
-        </Card>
-      </Badge.Ribbon>
+              </div>
+            }
+          >
+            <div className="card-text-wrapper">
+              <Row>
+                <Col span={14}>
+                  <Title className="card-title" level={5}>
+                    {s.name}
+                  </Title>
+                </Col>
+                <Col
+                  span={10}
+                  style={{
+                    alignItems: "center",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  <StarTwoTone
+                    twoToneColor={COLORS.PRIMARY}
+                    style={{
+                      marginRight: "5px",
+                      height: "20px",
+                    }}
+                  />
+                  <span>{s.rating}</span>
+                </Col>
+              </Row>
+              <Row>
+                <span
+                  style={{
+                    marginBottom: "10px",
+                  }}
+                >
+                  {s.available ? (
+                    <Tag color="#23A457">Available</Tag>
+                  ) : (
+                    <Tag color="#F15E63">Busy</Tag>
+                  )}
+                </span>
+              </Row>
+            </div>
+          </Card>
+        </Badge.Ribbon>
+      </NavLink>
     );
   });
 

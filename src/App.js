@@ -12,6 +12,7 @@ import Services from "./pages/services/Services";
 import SpeechRecognizer from "./components/speech/SpeechRecognizer";
 import SalonsList from "./pages/services/SalonsList";
 import StylistsList from "./pages/services/StylistsList";
+import StylistProfile from "./pages/stylist/StylistProfile";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/salons" element={<SalonsList />} />
             <Route path="/stylists" element={<StylistsList />} />
+            <Route path="/profile-stylist" element={<StylistProfile />} />
 
             <Route path="/chat" element={<ChatWindow />} />
             <Route path="/confirmation" element={<Confirmation />} />
