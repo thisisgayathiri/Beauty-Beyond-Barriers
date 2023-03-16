@@ -8,6 +8,8 @@ function createRandomUser(i) {
     avatar: i + '.jpg',
     email: faker.internet.email(),
     name: faker.name.firstName() + " " + faker.name.lastName(),
+    phoneNumber: '92332234233',
+    rating: '4.2 (100+)'
   };
 }
 
