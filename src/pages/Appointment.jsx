@@ -80,7 +80,7 @@ function Appointment() {
 
       <TitleHeader title="Appointment Date" />
       <Row justify={"center"}>
-        <DatePicker onChange={onDateChange} picker="week" />
+        <DatePicker onChange={onDateChange} />
       </Row>
 
 

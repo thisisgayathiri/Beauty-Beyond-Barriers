@@ -13,6 +13,7 @@ import "./SalonsList.css";
 import stylists from "../../data/stylists";
 import Title from "antd/es/typography/Title";
 import { NavLink } from "react-router-dom";
+import MyDatePicker from "../../components/common/MyDatePicker";
 
 const StylistsList = () => {
   const stylistsCard = _.map(stylists, (s) => {
@@ -145,7 +146,7 @@ const StylistsList = () => {
         }}
       >
         <Col span={18}>
-          <DatePicker size="large" className="date-picker" />
+          <MyDatePicker />
         </Col>
         <Col span={3}>
           <SortAscendingOutlined
