@@ -2,25 +2,31 @@ import { Divider, Progress, Row } from "antd";
 import Card from "antd/es/card/Card";
 import Title from "antd/es/typography/Title";
 import React from "react";
+import { useNavigate } from "react-router";
 import { COLORS } from "../../constants/colors";
 import courses from "../../data/courses";
 
+
 const Courses = () => {
+    const navigate = useNavigate();
+    const next = () => {
+        navigate('/course');
+    }
     const coursesCard = _.map(courses, (course) => {
         return (
             <>
-            <Progress style={{width: "80%"}} percent={course.completed} status="active" />
-      
-                <Card
-                title ={course.name}
+                <Progress style={{ width: "80%" }} percent={course.completed} status="active" />
 
-              
+                <Card
+                    title={course.name}
+
+                    onClick={next}
                     hoverable
-                    style={{backgroundColor: '#E6E6FA', width: "300px", margin: "10px 20px" }}
+                    style={{ backgroundColor: '#E6E6FA', width: "300px", margin: "10px 20px" }}
                     cover={<img alt="salon" src={course.image} />}
                 >
 
-                   
+
                 </Card>
             </>
         );
@@ -75,21 +81,21 @@ const Courses = () => {
             <Divider orientation="right" plain>  </Divider>
 
 
-            {}
+            { }
 
             <Row justify={"left"}>
-                    <Title
-                        level={5}
-                        style={{
-                            marginLeft: '50px',
-                            fontWeight: '500',
-                            textAlign: "center",
-                            color: COLORS.SECONDARY,
-                        }}
-                    >
-                        Your Courses
-                    </Title>
-                </Row>
+                <Title
+                    level={5}
+                    style={{
+                        marginLeft: '50px',
+                        fontWeight: '500',
+                        textAlign: "center",
+                        color: COLORS.SECONDARY,
+                    }}
+                >
+                    Your Courses
+                </Title>
+            </Row>
 
 
 

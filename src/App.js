@@ -14,6 +14,7 @@ import SalonsList from "./pages/services/SalonsList";
 import StylistsList from "./pages/services/StylistsList";
 import StylistProfile from "./pages/stylist/StylistProfile";
 import Courses from "./pages/courses/Course";
+import CourseDetails from "./pages/courses/CourseDetails";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/speech" element={<SpeechRecognizer />} />
             <Route path="/courses" element ={<Courses/>} />
+            <Route path="/course" element={<CourseDetails/>} />
           </Routes>
         </BrowserRouter>
       </div>
