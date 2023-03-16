@@ -14,7 +14,17 @@ const Location = ({ location }) => {
           marginRight: "5px",
         }}
       />
-      <span>{location}</span>
+      <span
+        style={{
+          overflow: "hidden",
+          whiteSpace: "nowrap",
+          textOverflow: "ellipsis",
+          width: "170px",
+          display: "inline-block",
+        }}
+      >
+        {location}
+      </span>
     </Card>
   );
 };
