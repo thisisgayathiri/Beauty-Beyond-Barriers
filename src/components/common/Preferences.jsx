@@ -1,5 +1,5 @@
-import React from "react";
-import _ from "lodash";
+import React, { useState } from "react";
+import _, { set } from "lodash";
 import "./Preferences.css";
 
 import { Card, List } from "antd";
@@ -15,6 +15,7 @@ import KidSafeIcon from "../svgs/KidSafe";
 import LockerRoomIcon from "../svgs/LockerRoom";
 import ToiletsIcon from "../svgs/Toilets";
 import GrabRailsIcon from "../svgs/GrabRails";
+import { COLORS } from "../../constants/colors";
 
 const getComponentbyIcon = (preference) => {
   if (_.isEqual(preference, "WHEELCHAIR")) return <AccessibilityIcon />;
@@ -30,20 +31,38 @@ const getComponentbyIcon = (preference) => {
   else if (_.isEqual(preference, "TOILETS")) return <ToiletsIcon />;
 };
 
-const Preferences = ({}) => {
+
+
+
+const Preferences = ({ }) => {
+  const [preferencesList, setPreferencesList] = useState(preferences);
+  const clickPreferences = (id) => {
+    const prefs = preferencesList.map((item) => {
+      if (item.id == id && item.isSelected == false) {
+        item.isSelected = true;
+      } else if (item.id == id && item.isSelected) {
+        item.isSelected = false;
+      }
+      return item;
+    })
+    setPreferencesList(prefs);
+  }
+
   return (
     <List
       grid={{
         gutter: 3,
       }}
       className='preferences-list'
-      dataSource={preferences}
+      dataSource={preferencesList}
       renderItem={(item) => (
         <List.Item justify="space-around">
           <Card
+            onClick={() => clickPreferences(item.id)}
             hoverable
             style={{
               padding: "0px 10px",
+              borderColor: item.isSelected ? COLORS.PRIMARY_DARK : ''
             }}
           >
             <span className="list-item-icon">
