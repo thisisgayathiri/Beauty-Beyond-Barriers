@@ -24,10 +24,10 @@ const TabMenu = () => {
       <Tabs
         style={{
           backgroundColor: "white",
-          padding: "0 20px",
+          padding: "0px 20px",
           alignItems: "center",
         }}
-        defaultActiveKey="2"
+        defaultActiveKey="1"
         items={menuItems.map(({ name, icon, id }) => {
           return {
             label: (

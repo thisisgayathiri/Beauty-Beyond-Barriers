@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceOptions from "./ServiceOptions";
-import { Col, Row } from "antd";
+import { Col, Row, Select, Space } from "antd";
 import { COLORS } from "../../constants/colors";
 import Location from "../../components/Location";
 
@@ -9,7 +9,7 @@ import Salons from "../../components/Salons";
 import Stylists from "../../components/Stylists";
 import More from "../../components/common/More";
 
-import './Services.css'
+import "./Services.css";
 import TabMenu from "../../components/common/TabMenu";
 
 function Services() {
@@ -23,10 +23,25 @@ function Services() {
         gutter={24}
         style={{
           margin: "10px",
+          alignItems: "center",
         }}
       >
-        <Col span={24}>
+        <Col span={15}>
           <Location location="3604 Chestnut, Philadelphia" />
+        </Col>
+        <Col span={9}>
+          <Space direction="horizontal" size={0}>
+            <span style={{ marginRight: "10px" }}>For</span>
+            <Select
+              defaultValue="Myself"
+              options={[
+                { value: "Myself", label: "Myself" },
+                { value: "Mom", label: "Mom" },
+                { value: "Dad", label: "Dad" },
+                { value: "Pet", label: "Pet" },
+              ]}
+            />
+          </Space>
         </Col>
       </Row>
 
@@ -106,7 +121,7 @@ function Services() {
       </Row>
       <Stylists />
 
-     <TabMenu />
+      <TabMenu />
     </div>
   );
 }
