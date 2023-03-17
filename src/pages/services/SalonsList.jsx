@@ -4,7 +4,7 @@ import {
   SortAscendingOutlined,
   StarTwoTone,
 } from "@ant-design/icons";
-import { Badge, Card, Col, DatePicker, Row, Select, Space } from "antd";
+import { Badge, Card, Col, Row, Select, Space } from "antd";
 import React from "react";
 import TabMenu from "../../components/common/TabMenu";
 import Location from "../../components/Location";
@@ -14,6 +14,7 @@ import salons from "../../data/salons";
 import Title from "antd/es/typography/Title";
 import { NavLink } from "react-router-dom";
 import MyDatePicker from "../../components/common/MyDatePicker";
+import menuItems from "../../data/menu";
 
 const SalonsList = () => {
   const salonsCard = _.map(salons, (s) => {
@@ -155,7 +156,7 @@ const SalonsList = () => {
         </Col>
       </Row>
 
-      <TabMenu />
+      <TabMenu menuItems={menuItems} />
     </div>
   );
 };

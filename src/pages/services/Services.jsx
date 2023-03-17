@@ -8,6 +8,7 @@ import Title from "antd/es/typography/Title";
 import Salons from "../../components/Salons";
 import Stylists from "../../components/Stylists";
 import More from "../../components/common/More";
+import menuItems from "../../data/menu";
 
 import "./Services.css";
 import TabMenu from "../../components/common/TabMenu";
@@ -121,7 +122,7 @@ function Services() {
       </Row>
       <Stylists />
 
-      <TabMenu />
+      <TabMenu menuItems={menuItems} />
     </div>
   );
 }

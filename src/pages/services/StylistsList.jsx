@@ -4,7 +4,7 @@ import {
   SortAscendingOutlined,
   StarTwoTone,
 } from "@ant-design/icons";
-import { Badge, Card, Col, DatePicker, Row, Select, Space, Tag } from "antd";
+import { Badge, Card, Col, Row, Select, Space, Tag } from "antd";
 import React from "react";
 import TabMenu from "../../components/common/TabMenu";
 import Location from "../../components/Location";
@@ -14,6 +14,7 @@ import stylists from "../../data/stylists";
 import Title from "antd/es/typography/Title";
 import { NavLink } from "react-router-dom";
 import MyDatePicker from "../../components/common/MyDatePicker";
+import menuItems from "../../data/menu";
 
 const StylistsList = () => {
   const stylistsCard = _.map(stylists, (s) => {
@@ -204,7 +205,7 @@ const StylistsList = () => {
         </Col>
       </Row>
 
-      <TabMenu />
+      <TabMenu menuItems={menuItems} />
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.stylist-profile-card .ant-card-cover {
+    display: flex;
+    justify-content: center;
+}
+
+.stylist-profile-card {
+    justify-content: center;
+    padding-top: 5px;
+}
