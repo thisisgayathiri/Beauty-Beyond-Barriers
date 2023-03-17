@@ -47,13 +47,13 @@ const WelcomeOnboard = () => {
             <Col span={24}>
               <div
                 style={{
-                  height: "60vh",
+                  height: "50vh",
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}
               >
-                <img width={'300px'} height= {'300px'} src="/images/logo.png" alt="logo" />
+                <img width={'325px'} height= {'300px'} src="/images/logo-1.png" alt="logo" />
               </div>
             </Col>
           </Row>
@@ -65,7 +65,7 @@ const WelcomeOnboard = () => {
                 color: COLORS.SECONDARY,
               }}
             >
-              Beauty is everywhere
+              Beauty beyond barriers
             </Title>
           </Row>
 
@@ -83,7 +83,9 @@ const WelcomeOnboard = () => {
             </Title>
           </Row>
 
-          <Row justify={"center"}>
+          <Row justify={"center"} style={{
+            marginTop: '40px'
+          }}>
             <NavLink to="/sign-up">
               <RightCircleTwoTone
                 style={{ fontSize: "50px" }}
