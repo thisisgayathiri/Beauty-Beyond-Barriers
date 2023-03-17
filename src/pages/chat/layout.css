@@ -177,6 +177,10 @@
 	 border-bottom-color: #94c2ed;
 	 left: 93%;
 }
+
+.chat .chat-history ul li {
+	list-style: none;
+}
  .chat .chat-message {
 	 padding: 30px;
 	 width: 70%
