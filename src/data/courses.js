@@ -24,6 +24,36 @@ const courses = [
         "image": "/images/courses/support.jpeg",
         "completed": "5"
     },
+    {
+        "id": 5,
+        "name": "Disability inclusion",
+        "image": "/images/courses/support.jpeg",
+        "completed": "3"
+    },
+    {
+        "id": 6,
+        "name": "Disability awareness",
+        "image": "/images/courses/support.jpeg",
+        "completed": "5"
+    },
+    {
+        "id": 7,
+        "name": "Disability etiquette",
+        "image": "/images/courses/support.jpeg",
+        "completed": "5"
+    },
+    {
+        "id": 8,
+        "name": "Etiquette: Interacting with People with Disabilities",
+        "image": "/images/courses/support.jpeg",
+        "completed": "5"
+    },
+    {
+        "id": 9,
+        "name": "Types of disabilities and hidden disabilities",
+        "image": "/images/courses/support.jpeg",
+        "completed": "5"
+    },
 ]
 
 export default courses;
