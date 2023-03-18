@@ -12,7 +12,7 @@ const preferences = [
         isSelected: false
     },
     {
-        id: 2,
+        id: 3,
         title: "Lift",
         icon: "LIFT",
         isSelected: false
