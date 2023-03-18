@@ -18,55 +18,55 @@ const preferences = [
         isSelected: false
     },
     {
-        id: 3,
+        id: 4,
         title: "Noiseless",
         icon: "NOISEFREE",
         isSelected: false
     },
     {
-        id: 4,
+        id: 5,
         title: "Helping hand",
         icon: "HELP",
         isSelected: false
     },
     {
-        id: 5,
+        id: 6,
         title: "Cafe",
         icon: "CAFE",
         isSelected: false
     },
     {
-        id: 6,
+        id: 7,
         title: "Reserved Parking",
         icon: "R_PARKING",
         isSelected: false
     },
     {
-        id: 7,
+        id: 8,
         title: "Grab rails",
         icon: "RAILS",
         isSelected: false
     },
     {
-        id: 8,
+        id: 9,
         title: "Home visit",
         icon: "HOME_VISIT",
         isSelected: false
     },
     {
-        id: 9,
+        id: 10,
         title: "Kid safe",
         icon: "KID_SAFE",
         isSelected: false
     },
     {
-        id: 10,
+        id: 11,
         title: "Locker rooms",
         icon: "LOCKER_ROOMS",
         isSelected: false
     },
     {
-        id: 11,
+        id: 12,
         title: "Toilets",
         icon: "TOILETS",
         isSelected: false
