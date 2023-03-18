@@ -16,6 +16,7 @@ import LockerRoomIcon from "../svgs/LockerRoom";
 import ToiletsIcon from "../svgs/Toilets";
 import GrabRailsIcon from "../svgs/GrabRails";
 import { COLORS } from "../../constants/colors";
+import RampIcon from "../svgs/Ramps";
 
 const getComponentbyIcon = (preference) => {
   if (_.isEqual(preference, "WHEELCHAIR")) return <AccessibilityIcon />;
@@ -29,6 +30,7 @@ const getComponentbyIcon = (preference) => {
   else if (_.isEqual(preference, "KID_SAFE")) return <KidSafeIcon />;
   else if (_.isEqual(preference, "LOCKER_ROOMS")) return <LockerRoomIcon />;
   else if (_.isEqual(preference, "TOILETS")) return <ToiletsIcon />;
+  else if(_.isEqual(preference, "RAMP")) return <RampIcon />
 };
 
 

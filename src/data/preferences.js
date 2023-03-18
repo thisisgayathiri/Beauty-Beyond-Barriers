@@ -7,6 +7,12 @@ const preferences = [
     },
     {
         id: 2,
+        title: "Ramps",
+        icon: "RAMP",
+        isSelected: false
+    },
+    {
+        id: 2,
         title: "Lift",
         icon: "LIFT",
         isSelected: false
