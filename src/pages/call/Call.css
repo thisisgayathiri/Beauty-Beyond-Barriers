@@ -1,7 +1,5 @@
 @import '//fonts.googleapis.com/icon?family=Material+Icons';
- html .call, body .call  {
-	 height: 100%;
-}
+
 .call {
     margin-top: 90%; 
 }
@@ -38,7 +36,7 @@
 		 box-shadow: 0 0 0 10vmin rgba(255, 0, 102, 0);
 	}
 }
- button {
+.call button {
 	 border-radius: 50%;
 	 font-size: 24px;
 	 height: 56px;
@@ -68,7 +66,7 @@
 	 align-content: center;
 	 justify-content: center;
 }
- button .inner-pulse {
+.call  button .inner-pulse {
 	 display: flex;
 	 flex-direction: row;
 	 align-items: center;
@@ -81,7 +79,7 @@
 	 width: 45px;
 	 background: transparent;
 }
- button .inner-pulse i {
+.call  button .inner-pulse i {
 	 animation: shake 1.5s ease infinite;
 }
  @keyframes innerpulse {
