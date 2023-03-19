@@ -5,7 +5,7 @@ import {
   StarTwoTone,
 } from "@ant-design/icons";
 import { Badge, Card, Col, Row, Select, Space } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import TabMenu from "../../components/common/TabMenu";
 import Location from "../../components/Location";
 import { COLORS } from "../../constants/colors";
@@ -15,29 +15,41 @@ import Title from "antd/es/typography/Title";
 import { NavLink } from "react-router-dom";
 import MyDatePicker from "../../components/common/MyDatePicker";
 import menuItems from "../../data/menu";
+import FilterList from "../../components/FilterList";
 
 const SalonsList = () => {
+  const [showFilter, setShowFilter] = useState(false);
+
+  const toggleFilter = () => {
+    setShowFilter(!showFilter);
+  };
+
   const salonsCard = _.map(salons, (s) => {
     return (
       <Card cover={<img alt="salon" src={s.image} />}>
         <div className="card-text-wrapper">
           <Row>
-            <Col
-              span={18}
-            >
+            <Col span={18}>
               <Title className="card-title" level={5}>
                 {s.name}
               </Title>
             </Col>
-            <Col span={5}  style={{
+            <Col
+              span={5}
+              style={{
                 alignItems: "center",
                 display: "flex",
-                justifyContent: 'flex-end'
-              }}>
-              <span style={{
-                color: COLORS.SECONDARY,
-                fontSize: '12px'
-              }}>{s.location}</span>
+                justifyContent: "flex-end",
+              }}
+            >
+              <span
+                style={{
+                  color: COLORS.SECONDARY,
+                  fontSize: "12px",
+                }}
+              >
+                {s.location}
+              </span>
             </Col>
           </Row>
 
@@ -46,7 +58,7 @@ const SalonsList = () => {
               twoToneColor={COLORS.PRIMARY}
               style={{
                 marginRight: "5px",
-                height: '20px'
+                height: "20px",
               }}
             />
             <span className="subText">{s.rating}</span>
@@ -62,6 +74,7 @@ const SalonsList = () => {
         height: "100vh",
       }}
     >
+      <FilterList show={showFilter} onClick={toggleFilter} />
       <Row
         gutter={24}
         style={{
@@ -70,10 +83,9 @@ const SalonsList = () => {
         }}
       >
         <Col span={2}>
-            <NavLink to={'/services'}>
-            <LeftOutlined  />
-            </NavLink>
-          
+          <NavLink to={"/services"}>
+            <LeftOutlined />
+          </NavLink>
         </Col>
         <Col span={13}>
           <Location location="3604 Chestnut, Philadelphia" />
@@ -113,6 +125,7 @@ const SalonsList = () => {
         </Col>
         <Col span={3}>
           <FilterOutlined
+            onClick={toggleFilter}
             className="icon-container"
             style={{
               color: COLORS.SECONDARY,
