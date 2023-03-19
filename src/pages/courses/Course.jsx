@@ -7,6 +7,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import TabMenu from "../../components/common/TabMenu";
 import { COLORS } from "../../constants/colors";
+import allMenuItems from "../../data/allyMenu";
 import courses from "../../data/courses";
 import menuItems from "../../data/menu";
 
@@ -118,14 +119,14 @@ const Courses = () => {
               marginLeft: "30px",
             }}
           >
-            Be yourself, Be an
+            Become an
             <div
               style={{
                 width: "50px",
                 height: "50px",
                 display: "inline-block",
                 verticalAlign: "middle",
-                margin: '0 10px'
+                margin: "0 10px",
               }}
             >
               <img
@@ -178,6 +179,60 @@ const Courses = () => {
         </Col>
       </Row>
 
+      <Row>
+        <div
+          style={{
+            margin: "30px",
+            borderRadius: "10px",
+            padding: "20px",
+            display: "flex",
+            background:
+              "linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%)",
+          }}
+        >
+          <Col
+            span={18}
+            style={{
+              textAlign: "left",
+              color: COLORS.WHITE,
+              lineHeight: "1.75",
+              fontWeight: 500,
+            }}
+          >
+            You are few steps away from getting your  <div
+              style={{
+                width: "40px",
+                height: "40px",
+                display: "inline-block",
+                verticalAlign: "middle",
+              }}
+            >
+              <img
+                src="/images/logo-ally.png"
+                alt="logo"
+                height={"100%"}
+                width={"100%"}
+              />
+            </div> badge!
+          </Col>
+          <Col span={4}>
+            <div
+              style={{
+                height: "70px",
+                width: "60px",
+              }}
+            >
+              <img
+                src="/images/ally-badge.png"
+                width={"100%"}
+                height={"100%"}
+                alt=""
+              />
+            </div>
+          </Col>
+        </div>
+      </Row>
+
       <Row justify={"left"}>
         <Col span={16}>
           <Title
@@ -223,9 +278,6 @@ const Courses = () => {
 
       <Row
         justify={"left"}
-        style={{
-          backgroundColor: COLORS.PRIMARY,
-        }}
       >
         <Col span={16}>
           <Title
@@ -265,13 +317,12 @@ const Courses = () => {
           overflow: "scroll",
           padding: "10px",
           marginBottom: "50px",
-          backgroundColor: COLORS.PRIMARY,
         }}
       >
         {availableCourses}
       </div>
 
-      <TabMenu menuItems={menuItems} />
+      <TabMenu menuItems={allMenuItems} />
     </>
   );
 };
