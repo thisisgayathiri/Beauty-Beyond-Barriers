@@ -11,7 +11,7 @@ import ProfileService from "../stylist-profile/ProfileService";
 import ProfileBooking from "../stylist-profile/ProfileBooking";
 import ProfileAbout from "../stylist-profile/ProfileAbout";
 
-const TabMenu = ({ menuItems, type, isFixed = true }) => {
+const TabMenu = ({ menuItems, type, isFixed = true, activeIndex = "1" }) => {
   const getIcon = (icon) => {
     if (_.isEqual(icon, "explore"))
       return <AppstoreTwoTone twoToneColor={COLORS.PRIMARY} />;
@@ -28,6 +28,10 @@ const TabMenu = ({ menuItems, type, isFixed = true }) => {
     else return null;
   };
 
+  const onTabClick = (key) => {
+    activeIndex = key;
+  };
+
   const tabs = (
     <Tabs
       type={type}
@@ -36,7 +40,9 @@ const TabMenu = ({ menuItems, type, isFixed = true }) => {
         padding: "0px 20px",
         alignItems: "center",
       }}
-      defaultActiveKey="1"
+      defaultActiveKey={activeIndex}
+      activeKey={activeIndex}
+      onTabClick={onTabClick}
       items={menuItems.map(({ name, icon, id }) => {
         return {
           label: (
@@ -56,7 +62,7 @@ const TabMenu = ({ menuItems, type, isFixed = true }) => {
     />
   );
 
-  const fixedTab =  <Affix offsetBottom={0}>{tabs}</Affix>
+  const fixedTab = <Affix offsetBottom={0}>{tabs}</Affix>;
   return (
     <>
       {isFixed && fixedTab}

@@ -3,10 +3,9 @@ import { Table, Button, Space, Tag, Rate, Row, Col } from "antd";
 
 import { COLORS } from "../../constants/colors";
 import Title from "antd/es/typography/Title";
-import TabMenu from "../common/TabMenu";
-import menuItems from "../../data/menu";
 import "./Profile.css";
 import stylistServices from "../../data/stylistServices";
+import { useNavigate } from "react-router-dom";
 
 const columns = [
   {
@@ -45,6 +44,12 @@ const rowSelection = {
 };
 
 const ProfileService = () => {
+  const navigate = useNavigate();
+
+  const book = () => {
+    navigate("/profile-stylist?tab=BOOK");
+  };
+
   return (
     <>
       <Row>
@@ -85,8 +90,7 @@ const ProfileService = () => {
       <Row>
         <Col span={24}>
           <Button
-            disabled
-            block
+            onClick={book}
             size="large"
             htmlType="submit"
             style={{
@@ -102,8 +106,6 @@ const ProfileService = () => {
           </Button>
         </Col>
       </Row>
-
-      <TabMenu menuItems={menuItems} />
     </>
   );
 };

@@ -1,49 +1,177 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import MyDatePicker from "../../components/common/MyDatePicker";
-import Card from "antd/es/card/Card";
-import { Radio, Space } from 'antd';
+import { Button, Col, Modal, Radio, Result, Row, Select } from "antd";
 import Title from "antd/es/typography/Title";
 import { COLORS } from "../../constants/colors";
-
-const options = [
-  { label: '[09:00 AM - 12:00 AM]', value: 'Morning',disabled: true },
-  { label: '[01:00 PM -04:00 PM]', value: 'Afternoon'},
-  { label: '[05:00 PM - 08:00 PM]', value: 'Evening' },
-  { label: '[08:00 PM - 10:00 PM]', value: 'Night' },
-];
+import { useNavigate } from "react-router-dom";
 
 const ProfileBooking = () => {
+  const [value, setValue] = useState(null);
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  
-  const [value, setValue] = useState('Choose Your Favorable Time Slot !');
-  
-  const onChange3 = ({ target: { value } }) => {
-    console.log('radio3 checked', value);
-    setValue(value);
+  const showModal = () => {
+    setOpen(true);
   };
-  
-  return <>
-    <Space direction='vertical'>
-  <MyDatePicker />
-   <Card>
-   <Space direction='vertical'>
-   <Title
-        style={{
-          padding: "0 0px 0px 0px",
-          fontWeight: 400,
-          color: COLORS.SECONDARY,
-        }}
-        level={5}
+
+  const handleOk = () => {
+    setOpen(false);
+    navigate("/services");
+  };
+
+  const onChange = (e) => {
+    console.log("radio checked", e.target.value);
+    setValue(e.target.value);
+  };
+
+  const handleChange = (tag, checked) => {
+    const nextSelectedTags = checked
+      ? [...selectedTags, tag]
+      : selectedTags.filter((t) => t !== tag);
+    console.log("You are interested in: ", nextSelectedTags);
+    setSelectedTags(nextSelectedTags);
+  };
+
+  return (
+    <>
+      <Row justify={"center"}>
+        <Col span={22}>
+          <MyDatePicker
+            style={{
+              marginLeft: "30px",
+            }}
+          />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col span={22}>
+          <Title
+            style={{
+              padding: "0 0 0 0",
+              color: COLORS.SECONDARY,
+              marginLeft: "10px",
+              textAlign: "left",
+            }}
+            level={5}
+          >
+            Choose the time slot that works for you
+          </Title>
+        </Col>
+        <Col
+          style={{
+            margin: "0 0 20px 20px",
+            textAlign: "left",
+          }}
+        >
+          <Radio.Group onChange={onChange} value={value}>
+            <Radio
+              style={{
+                marginTop: "7px",
+              }}
+              value={1}
+            >
+              09:00 am - 12:00 am
+            </Radio>
+            <Radio
+              style={{
+                marginTop: "7px",
+              }}
+              value={2}
+            >
+              01:00 pm -04:00 pm
+            </Radio>
+            <Radio
+              style={{
+                marginTop: "7px",
+              }}
+              value={3}
+            >
+              05:00 pm - 08:00 pm
+            </Radio>
+            <Radio
+              style={{
+                marginTop: "7px",
+              }}
+              value={4}
+            >
+              08:00 pm - 10:00 pm
+            </Radio>
+          </Radio.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Title
+          level={5}
+          style={{
+            marginLeft: "10px",
+            marginTop: "5px",
+          }}
+        >
+          Recurring appointment
+        </Title>
+      </Row>
+      <Row>
+        <Col>
+          <Select
+            style={{
+              marginLeft: "10px",
+              marginBottom: "20px",
+            }}
+            defaultValue="Does not repeat"
+            onChange={handleChange}
+            options={[
+              { value: "Does not repeat", label: "Does not repeat" },
+              { value: "Weekly on Monday", label: "Weekly on Monday" },
+              {
+                value: "Monthly on third monday",
+                label: "Monthly on third monday",
+              },
+              {
+                value: "Custom...",
+                label: "Custom...",
+              },
+            ]}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Button
+            size="large"
+            htmlType="submit"
+            onClick={showModal}
+            style={{
+              backgroundColor: COLORS.PRIMARY,
+              color: COLORS.PRIMARY_LIGHT,
+              fontWeight: 500,
+              marginBottom: "50px",
+            }}
+            className="login-form-button"
+          >
+            Book appointment
+          </Button>
+        </Col>
+      </Row>
+
+      <Modal
+        open={open}
+        closable={false}
+        footer={[
+          <Button key="submit" type="primary" onClick={handleOk}>
+            Ok
+          </Button>,
+        ]}
       >
-        Book Your Favorable Slot
-      </Title>
-      <br/><br/>
-  <Radio.Group options={options} onChange={onChange3} value={value} buttonStyle="solid" optionType="button" 
-  style={{ width: "250px"}}/>
-   </Space>
-  </Card>
- </Space>
-  </>;
+        <Result
+          status="success"
+          title="Your appointment has been booked."
+          subTitle="You will soon get a confirmation
+        from the stylist"
+        />
+      </Modal>
+    </>
+  );
 };
 
 export default ProfileBooking;

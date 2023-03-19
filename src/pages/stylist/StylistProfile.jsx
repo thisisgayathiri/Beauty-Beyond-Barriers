@@ -5,16 +5,32 @@ import {
   PhoneOutlined,
   StarTwoTone,
 } from "@ant-design/icons";
-import { Col, Row, Card, Badge, Tabs } from "antd";
+import { Col, Row, Card, Badge } from "antd";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Title from "antd/es/typography/Title";
 import "./StylistProfile.css";
 import TabMenu from "../../components/common/TabMenu";
+import menuItems from "../../data/menu";
 import stylistProfileMenu from "../../data/stylistProfileMenu";
 import { COLORS } from "../../constants/colors";
+import { useLocation } from "react-router-dom";
+
+function useQuery() {
+  const { search } = useLocation();
+  return React.useMemo(() => new URLSearchParams(search), [search]);
+}
 
 const StylistProfile = () => {
+  let query = useQuery();
+  const tab = query.get("tab");
+
+  const getIndex = (tab) => {
+    if (tab === "SERVICES") return "1";
+    if (tab === "BOOK") return "2";
+    if (tab === "ABOUT") return "3";
+  };
+
   return (
     <>
       <Row
@@ -93,7 +109,7 @@ const StylistProfile = () => {
                 marginTop: "10px",
               }}
             >
-              Sowmya Seshadri
+              Coby Halvorsin
             </Title>
             <Row
               style={{
@@ -128,9 +144,11 @@ const StylistProfile = () => {
         }}
       >
         <Col span={24}>
-          <TabMenu isFixed={false} menuItems={stylistProfileMenu} />
+          <TabMenu isFixed={false} menuItems={stylistProfileMenu} activeIndex={getIndex(tab)} />
         </Col>
       </Row>
+
+      <TabMenu menuItems={menuItems} />
     </>
   );
 };
