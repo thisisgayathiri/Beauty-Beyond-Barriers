@@ -89,7 +89,7 @@ const Welcome = () => {
             marginTop: "40px",
           }}
         >
-          <NavLink to="/">
+          <NavLink to="/courses">
             <RightCircleTwoTone
               style={{ fontSize: "50px" }}
               twoToneColor={COLORS.PRIMARY}

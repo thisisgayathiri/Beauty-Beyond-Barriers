@@ -115,10 +115,26 @@ const Courses = () => {
             style={{
               textAlign: "left",
               color: COLORS.SECONDARY,
-              marginLeft: '30px'
+              marginLeft: "30px",
             }}
           >
-            Be yourself, Be an ally stylist
+            Be yourself, Be an
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                display: "inline-block",
+                verticalAlign: "middle",
+              }}
+            >
+              <img
+                src="/images/logo-ally.png"
+                alt="logo"
+                height={"100%"}
+                width={"100%"}
+              />
+            </div>
+            stylist
           </Title>
         </Row>
 
@@ -247,7 +263,7 @@ const Courses = () => {
           whiteSpace: "nowrap",
           overflow: "scroll",
           padding: "10px",
-          marginBottom: '50px',
+          marginBottom: "50px",
           backgroundColor: COLORS.PRIMARY,
         }}
       >
