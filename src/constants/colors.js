@@ -4,6 +4,7 @@ const COLORS = Object.freeze({
   PRIMARY_DARK: '#E2836Aff',  // burnt-sienna
   WHITE: '#FFFFFFff',
   PRIMARY_LIGHT: '#FEFCFBff',
+  GREY_LIGHT: '#DFE0E2'
 })
 
 // Exported theme

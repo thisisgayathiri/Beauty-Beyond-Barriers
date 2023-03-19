@@ -22,7 +22,6 @@ const StylistProfile = () => {
         style={{
           margin: "10px",
           alignItems: "center",
-          // border: "1px solid black",
           padding: "20px 20px 5px 20px",
         }}
       >
@@ -84,7 +83,6 @@ const StylistProfile = () => {
         <div className="card-text-wrapper">
           <Row
             style={{
-              // border: "1px solid black",
               justifyContent: "center",
               flexDirection: "column",
             }}
@@ -130,7 +128,7 @@ const StylistProfile = () => {
         }}
       >
         <Col span={24}>
-          <TabMenu menuItems={stylistProfileMenu} />
+          <TabMenu isFixed={false} menuItems={stylistProfileMenu} />
         </Col>
       </Row>
     </>
