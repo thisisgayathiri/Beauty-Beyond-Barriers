@@ -21,12 +21,13 @@ function ChatWindow() {
         <div class="chat">
           <div class="chat-header clearfix">
             <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_06.jpg"
+              src="/images/stylists/1.jpg"
+              style={{width: "50px"}}
               alt="avatar"
             />
 
             <div class="chat-about">
-              <div class="chat-with">Tracy</div>
+              <div class="chat-with" style={{paddingTop: "10px"}}>Alessandra Fadel</div>
             </div>
             <i class="fa fa-star"></i>
           </div>
@@ -37,7 +38,7 @@ function ChatWindow() {
                 <div class="message-data align-right">
                   <span class="message-data-time">10:10 AM, Today</span> &nbsp;
                   &nbsp;
-                  <span class="message-data-name">Tracy</span>{" "}
+                  <span class="message-data-name">Alessandra Fadel</span>{" "}
                   <i class="fa fa-circle me"></i>
                 </div>
                 <div class="message other-message float-right">
@@ -62,7 +63,7 @@ function ChatWindow() {
                 <div class="message-data align-right">
                   <span class="message-data-time">10:14 AM, Today</span> &nbsp;
                   &nbsp;
-                  <span class="message-data-name">Tracy</span>{" "}
+                  <span class="message-data-name">Alessandra Fadel</span>{" "}
                   <i class="fa fa-circle me"></i>
                 </div>
                 <div class="message other-message float-right">
@@ -96,7 +97,7 @@ function ChatWindow() {
               )}
 
               <div class="loading">
-                Tracy is typing
+                Alessandra Fadel is typing
                 <div></div>
                 <div></div>
                 <div></div>

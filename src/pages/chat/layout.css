@@ -17,7 +17,7 @@
 .loading div {
   width: 10px;
   height: 10px;
-  background: #86bb71;
+  background: #E88B73ff;
   border-radius: 50%;
   box-shadow: 0 -0.4rem rgba(60, 0, 80, 0.1) inset;
 
@@ -68,7 +68,7 @@
   border: none;
   padding: 14px;
   color: white;
-  background: #6a6c75;
+  background: white;
   width: 90%;
   font-size: 14px;
 }
@@ -162,12 +162,12 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #86bb71;
+  border-bottom-color: #E88B73ff;
   border-width: 10px;
   margin-left: -10px;
 }
 .chat .chat-history .my-message {
-  background: #86bb71;
+  background: #E88B73ff;
   text-align: left;
 }
 .chat .chat-history .other-message {
