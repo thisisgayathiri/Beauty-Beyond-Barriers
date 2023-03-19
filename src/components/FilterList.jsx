@@ -57,7 +57,7 @@ const FilterList = ({ show, onClick }) => {
           Choose to find the best services for you
         </div>
 
-        {filterTags(["Home service", "Helping hand"])}
+        {filterTags(["Home service", "Virtual pre-consulting", "ally trained"])}
         <Divider />
 
         {filterTags(["Ramps", "Cafe", "Locker rooms", "Parking"])}
@@ -72,7 +72,7 @@ const FilterList = ({ show, onClick }) => {
         ])}
         <Divider />
 
-        {filterTags(["Kid safe"])}
+        {filterTags(["Kid safe", "Helping hand"])}
       </Modal>
     </>
   );
