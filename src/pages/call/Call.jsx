@@ -9,21 +9,25 @@ const Call = () => {
     return (
 
 
-      
-<div  className="call">
+        <>
 
 
-<div className="pulsating">
-  <button>
-    <div className="inner-pulse">
-      <i className="material-icons">phone</i>
-    </div>
-  </button>
-</div>
+    
 
+            <div className="call">
+                <div className="pulsating">
+                    <button>
+                        <div className="inner-pulse">
+                            <i className="material-icons">phone</i>
+                        </div>
+                    </button>
+                </div>
+            </div>
 
-</div>
-
+            <div style={{ fontWeight: "bold", fontFamily: "Poppins", fontSize: '20px', paddingTop: '20px' }}>
+                Calling Alessandra Fadel
+            </div>
+        </>
 
     )
 }
