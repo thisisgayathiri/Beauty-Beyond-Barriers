@@ -1,0 +1,27 @@
+.custom-ant-ribbon {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 22px;
+  list-style: none;
+  position: absolute;
+  top: 8px;
+  height: 22px;
+  white-space: nowrap;
+  border-radius: 4px;
+
+  z-index: 3;
+}
+.custom-ant-ribbon.ant-ribbon-placement-end {
+  inset-inline-end: -8px;
+  border-end-end-radius: 0;
+}
+
+.custom-ant-ribbon .ant-ribbon-text {
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 22px;
+  list-style: none;
+  white-space: nowrap;
+}

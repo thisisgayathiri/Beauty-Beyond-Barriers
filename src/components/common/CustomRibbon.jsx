@@ -1,0 +1,24 @@
+import React from "react";
+import { COLORS } from "../../constants/colors";
+import "./CustomRibbon.css";
+
+const CustomRibbon = ({ children, text, color }) => {
+  return (
+    <>
+      <div
+        class="custom-ant-ribbon ant-ribbon-placement-end"
+        style={{
+          color,
+          backgroundColor: color,
+        }}
+      >
+        <span class="ant-ribbon-text" style={{
+          color: COLORS.WHITE
+        }}>{text}</span>
+      </div>
+      {children}
+    </>
+  );
+};
+
+export default CustomRibbon;

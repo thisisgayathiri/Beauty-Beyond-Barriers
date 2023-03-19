@@ -15,93 +15,88 @@ import Title from "antd/es/typography/Title";
 import { NavLink } from "react-router-dom";
 import MyDatePicker from "../../components/common/MyDatePicker";
 import menuItems from "../../data/menu";
+import CustomRibbon from "../../components/common/CustomRibbon";
 
 const StylistsList = () => {
   const stylistsCard = _.map(stylists, (s) => {
     return (
       <NavLink to="/profile-stylist">
-        <Badge.Ribbon text="Trained">
-          <Card
-            //   actions={[
-            //     <PhoneOutlined
-            //       style={{
-            //         fontSize: "20px",
-            //         rotate: "105deg",
-            //       }}
-            //     />,
-            //     <>
-            //       <Badge dot={true} status={'success'}>
-            //         <MessageOutlined
-            //           style={{
-            //             fontSize: "20px",
-            //           }}
-            //         />
-            //         ,
-            //       </Badge>
-            //     </>,
-            //     <HeartOutlined
-            //       style={{
-            //         fontSize: "20px",
-            //       }}
-            //     />,
-            //   ]}
-            cover={
-              <div
-                style={{
-                  overflow: "hidden",
-                  height: "200px",
-                  backgroundColor: "#000000",
-                }}
-              >
-                <img
-                  style={{ height: "100%" }}
-                  alt="stylist"
-                  src={"/images/stylists/" + s.avatar}
-                />
-              </div>
-            }
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
+          <CustomRibbon
+            text={s.available ? "Available" : "Busy"}
+            color={s.available ? "#23A457" : "#F15E63"}
           >
-            <div className="card-text-wrapper">
-              <Row>
-                <Col span={14}>
-                  <Title className="card-title" level={5}>
-                    {s.name}
-                  </Title>
-                </Col>
-                <Col
-                  span={10}
+            <Card
+              cover={
+                <div
                   style={{
-                    alignItems: "center",
-                    display: "flex",
-                    justifyContent: "flex-end",
+                    overflow: "hidden",
+                    height: "200px",
+                    backgroundColor: "#000000",
                   }}
                 >
-                  <StarTwoTone
-                    twoToneColor={COLORS.PRIMARY}
-                    style={{
-                      marginRight: "5px",
-                      height: "20px",
-                    }}
+                  <img
+                    style={{ height: "100%" }}
+                    alt="stylist"
+                    src={"/images/stylists/" + s.avatar}
                   />
-                  <span>{s.rating}</span>
-                </Col>
-              </Row>
-              <Row>
-                <span
-                  style={{
-                    marginBottom: "10px",
-                  }}
-                >
-                  {s.available ? (
-                    <Tag color="#23A457">Available</Tag>
-                  ) : (
-                    <Tag color="#F15E63">Busy</Tag>
-                  )}
-                </span>
-              </Row>
-            </div>
-          </Card>
-        </Badge.Ribbon>
+                </div>
+              }
+            >
+              <div className="card-text-wrapper">
+                <Row>
+                  <Col span={13}>
+                    <Title className="card-title" level={5}>
+                      {s.name}
+                    </Title>
+                  </Col>
+                  <Col
+                    span={11}
+                    style={{
+                      alignItems: "center",
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      paddingRight: "5px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "38px",
+                        height: "28px",
+                        display: "inline-block",
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      <img
+                        src="/images/logo-ally.png"
+                        alt="logo"
+                        height={"100%"}
+                        width={"100%"}
+                      />
+                    </div>
+                    trained
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <StarTwoTone
+                      twoToneColor={COLORS.PRIMARY}
+                      style={{
+                        marginRight: "5px",
+                        height: "20px",
+                      }}
+                    />
+                    <span>{s.rating}</span>
+                  </Col>
+                </Row>
+              </div>
+            </Card>
+          </CustomRibbon>
+        </div>
       </NavLink>
     );
   });
