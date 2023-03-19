@@ -20,10 +20,10 @@ const CourseDetails = () => {
 
             }}
         >
-            <NavLink >
+            <NavLink to='/courses'>
                 <ArrowLeftOutlined
                     style={{
-                        fontSize: "30px",
+                        fontSize: "20px",
                         color: COLORS.SECONDARY,
                     }}
                 />
@@ -31,12 +31,11 @@ const CourseDetails = () => {
 
 
             <Title
-                level={3}
+                level={5}
                 style={{
                     margin: "auto",
                     textAlign: "center",
                     color: COLORS.SECONDARY,
-                    fontWeight: '400'
                 }}
             >
                 Course Details
@@ -47,7 +46,7 @@ const CourseDetails = () => {
 
         <Row justify={"center"}>
             <Title
-                level={3}
+                level={4}
                 style={{
                     paddingTop: "10px",
                     textAlign: "center",
@@ -90,10 +89,10 @@ const CourseDetails = () => {
                         marginLeft: "30px",
                         textAlign: "center",
                         color: "gray",
-                        fontSize: "20px"
+                        fontSize: "16px"
                     }}
                 >
-                    Class
+                    40 Videos
                 </Title>
             </Col>
 
@@ -104,10 +103,10 @@ const CourseDetails = () => {
                         marginLeft: "30px",
                         textAlign: "center",
                         color: "gray",
-                        fontSize: "20px"
+                        fontSize: "16px"
                     }}
                 >
-                    40 Videos
+                    30 hours
                 </Title>
             </Col>
 
