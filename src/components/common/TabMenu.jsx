@@ -11,7 +11,7 @@ import ProfileService from "../stylist-profile/ProfileService";
 import ProfileBooking from "../stylist-profile/ProfileBooking";
 import ProfileAbout from "../stylist-profile/ProfileAbout";
 
-const TabMenu = ({ menuItems, type }) => {
+const TabMenu = ({ menuItems, type, isFixed = true }) => {
   const getIcon = (icon) => {
     if (_.isEqual(icon, "explore"))
       return <AppstoreTwoTone twoToneColor={COLORS.PRIMARY} />;
@@ -28,34 +28,40 @@ const TabMenu = ({ menuItems, type }) => {
     else return null;
   };
 
+  const tabs = (
+    <Tabs
+      type={type}
+      style={{
+        backgroundColor: "white",
+        padding: "0px 20px",
+        alignItems: "center",
+      }}
+      defaultActiveKey="1"
+      items={menuItems.map(({ name, icon, id }) => {
+        return {
+          label: (
+            <span
+              style={{
+                backgroundColor: "white",
+              }}
+            >
+              {getIcon(icon)}
+              {name}
+            </span>
+          ),
+          key: id,
+          children: getChildren(name),
+        };
+      })}
+    />
+  );
+
+  const fixedTab =  <Affix offsetBottom={0}>{tabs}</Affix>
   return (
-    <Affix offsetBottom={0}>
-      <Tabs
-        type={type}
-        style={{
-          backgroundColor: "white",
-          padding: "0px 20px",
-          alignItems: "center",
-        }}
-        defaultActiveKey="1"
-        items={menuItems.map(({ name, icon, id }) => {
-          return {
-            label: (
-              <span
-                style={{
-                  backgroundColor: "white",
-                }}
-              >
-                {getIcon(icon)}
-                {name}
-              </span>
-            ),
-            key: id,
-            children: getChildren(name),
-          };
-        })}
-      />
-    </Affix>
+    <>
+      {isFixed && fixedTab}
+      {!isFixed && tabs}
+    </>
   );
 };
 

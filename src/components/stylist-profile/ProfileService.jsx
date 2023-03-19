@@ -1,75 +1,92 @@
 import React from "react";
-import { Divider, Table,Button, Space } from 'antd';
+import { Table, Button, Space, Tag, Rate, Row, Col } from "antd";
 
 import { COLORS } from "../../constants/colors";
-  
+import Title from "antd/es/typography/Title";
+import TabMenu from "../common/TabMenu";
+import menuItems from "../../data/menu";
+import "./Profile.css";
+import stylistServices from "../../data/stylistServices";
+
 const columns = [
   {
-    dataIndex: 'name',
-    render: (text) => <a>{text}</a>,
+    key: "services",
+    dataIndex: "service",
   },
   {
-    dataIndex: 'age',
-  },
-  {
-    dataIndex: 'address',
+    key: "rate",
+    dataIndex: "rate",
+    render: (rate) => (
+      <span>
+        <Rate
+          style={{
+            fontSize: "15px",
+          }}
+          disabled
+          defaultValue={rate}
+        />
+      </span>
+    ),
   },
 ];
-const data = [
-  {
-    key: '1',
-    name: 'Thumbnail',
-    age: 'Hair Stylist',
-    address: 'Ace',
-  },
-  {
-    key: '2',
-    name: 'Thumbnail',
-    age: 'Nail Treatments',
-    address: 'Platinum',
-  },
-  {
-    key: '3',
-    name: 'Thumbnail',
-    age: 'Facial and Skin Care',
-    address: 'Gold',
-  },
-  {
-    key: '4',
-    name: 'Thumbnail',
-    age: 'Massages',
-    address: 'Gold',
-  },
 
-];
-
-// rowSelection object indicates the need for row selection
 const rowSelection = {
   onChange: (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+    console.log(
+      `selectedRowKeys: ${selectedRowKeys}`,
+      "selectedRows: ",
+      selectedRows
+    );
   },
   getCheckboxProps: (record) => ({
-    disabled: record.name === 'Disabled User',
-    // Column configuration not to be checked
+    disabled: record.name === "Disabled User",
     name: record.name,
   }),
 };
 
 const ProfileService = () => {
   return (
-    <div>
-      <Table pagination={false} showHeader={false}
-        rowSelection={{
-          type: "checkbox",
-          ...rowSelection,
-        }}
-        columns={columns}
-        dataSource={data}
-      />
-      <div>
-      <Space direction="vertical" style={{ width: '100%' }}>
-    
-    <Button disabled block
+    <>
+      <Row>
+        <Col span={24}>
+          <Title
+            level={5}
+            style={{
+              color: COLORS.SECONDARY,
+              fontWeight: 500,
+              textAlign: "left",
+              marginLeft: "30px",
+            }}
+          >
+            Choose the services you're interested in
+          </Title>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Table
+            style={{
+              padding: 0,
+              margin: 0,
+            }}
+            className="profile-service-table"
+            pagination={false}
+            showHeader={false}
+            rowSelection={{
+              type: "checkbox",
+              ...rowSelection,
+            }}
+            columns={columns}
+            dataSource={stylistServices}
+          />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col span={24}>
+          <Button
+            disabled
+            block
             size="large"
             htmlType="submit"
             style={{
@@ -77,13 +94,17 @@ const ProfileService = () => {
               color: COLORS.PRIMARY_LIGHT,
               fontWeight: 500,
               borderColor: COLORS.PRIMARY_LIGHT,
-            }}className="login-form-button"
-            >
-              Book Slots
-            </Button>
-        </Space>
-      </div>
-    </div>
+              marginBottom: "50px",
+            }}
+            className="login-form-button"
+          >
+            Proceed to book
+          </Button>
+        </Col>
+      </Row>
+
+      <TabMenu menuItems={menuItems} />
+    </>
   );
 };
 

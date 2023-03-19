@@ -1,6 +1,7 @@
 import { Divider, Modal, Row, Space } from "antd";
 import CheckableTag from "antd/es/tag/CheckableTag";
 import React, { useEffect, useState } from "react";
+import { COLORS } from "../constants/colors";
 
 const FilterList = ({ show, onClick }) => {
   const [modal2Open, setModal2Open] = useState(show);
@@ -25,6 +26,7 @@ const FilterList = ({ show, onClick }) => {
               onChange={(checked) => handleChange(tag, checked)}
               style={{
                 border: "1px solid #DFE0E2",
+                borderColor: COLORS.GREY_LIGHT
               }}
             >
               {tag}

@@ -1,0 +1,8 @@
+.profile-service-table .ant-spin-container {
+    padding: 0;
+    margin: 10px;
+}
+
+.profile-service-table .ant-rate-star.ant-rate-star-full {
+    margin-inline-end: 2px !important
+}
