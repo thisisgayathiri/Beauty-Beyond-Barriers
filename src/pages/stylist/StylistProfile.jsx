@@ -58,12 +58,16 @@ const StylistProfile = () => {
       <Card
         className="stylist-profile-card"
         actions={[
-          <PhoneOutlined
-            style={{
-              fontSize: "20px",
-              rotate: "105deg",
-            }}
-          />,
+          <>
+            <NavLink to='/call'>
+              <PhoneOutlined
+                style={{
+                  fontSize: "20px",
+                  rotate: "105deg",
+                }}
+              />
+            </NavLink>
+          </>,
           <>
             <Badge dot={true} status={"success"}>
               <MessageOutlined
@@ -144,7 +148,11 @@ const StylistProfile = () => {
         }}
       >
         <Col span={24}>
-          <TabMenu isFixed={false} menuItems={stylistProfileMenu} activeIndex={getIndex(tab)} />
+          <TabMenu
+            isFixed={false}
+            menuItems={stylistProfileMenu}
+            activeIndex={getIndex(tab)}
+          />
         </Col>
       </Row>
 
