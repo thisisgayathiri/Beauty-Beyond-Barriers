@@ -5,7 +5,7 @@ import {
   StarTwoTone,
 } from "@ant-design/icons";
 import { Badge, Card, Col, Row, Select, Space, Tag } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import TabMenu from "../../components/common/TabMenu";
 import Location from "../../components/Location";
 import { COLORS } from "../../constants/colors";
@@ -16,8 +16,15 @@ import { NavLink } from "react-router-dom";
 import MyDatePicker from "../../components/common/MyDatePicker";
 import menuItems from "../../data/menu";
 import CustomRibbon from "../../components/common/CustomRibbon";
+import FilterList from "../../components/FilterList";
 
 const StylistsList = () => {
+  const [showFilter, setShowFilter] = useState(false);
+
+  const toggleFilter = () => {
+    setShowFilter(!showFilter);
+  };
+
   const stylistsCard = _.map(stylists, (s) => {
     return (
       <NavLink to="/profile-stylist">
@@ -107,6 +114,11 @@ const StylistsList = () => {
         height: "100vh",
       }}
     >
+      <FilterList
+        isStylistFilter={true}
+        show={showFilter}
+        onClick={toggleFilter}
+      />
       <Row
         gutter={24}
         style={{
@@ -156,6 +168,7 @@ const StylistsList = () => {
         </Col>
         <Col span={3}>
           <FilterOutlined
+            onClick={toggleFilter}
             className="icon-container"
             style={{
               color: COLORS.SECONDARY,

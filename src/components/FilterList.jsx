@@ -3,7 +3,7 @@ import CheckableTag from "antd/es/tag/CheckableTag";
 import React, { useEffect, useState } from "react";
 import { COLORS } from "../constants/colors";
 
-const FilterList = ({ show, onClick }) => {
+const FilterList = ({ show, onClick, isStylistFilter = false }) => {
   const [modal2Open, setModal2Open] = useState(show);
   const [selectedTags, setSelectedTags] = useState(["Books"]);
 
@@ -26,13 +26,14 @@ const FilterList = ({ show, onClick }) => {
               onChange={(checked) => handleChange(tag, checked)}
               style={{
                 border: "1px solid #DFE0E2",
-                borderColor: COLORS.GREY_LIGHT
+                borderColor: COLORS.GREY_LIGHT,
               }}
             >
               {tag}
             </CheckableTag>
           ))}
         </Space>
+        <Divider />
       </Row>
     );
   };
@@ -60,21 +61,20 @@ const FilterList = ({ show, onClick }) => {
         </div>
 
         {filterTags(["Home service", "Virtual pre-consulting", "ally trained"])}
-        <Divider />
 
-        {filterTags(["Ramps", "Cafe", "Locker rooms", "Parking"])}
-        <Divider />
+        {!isStylistFilter &&
+          filterTags(["Ramps", "Cafe", "Locker rooms", "Parking"])}
 
-        {filterTags([
-          "Lifts",
-          "Noiseless",
-          "Grab rails",
-          "Reserved Parking",
-          "Toilets",
-        ])}
-        <Divider />
+        {!isStylistFilter &&
+          filterTags([
+            "Lifts",
+            "Noiseless",
+            "Grab rails",
+            "Reserved Parking",
+            "Toilets",
+          ])}
 
-        {filterTags(["Kid safe", "Helping hand"])}
+        {!isStylistFilter && filterTags(["Kid safe", "Helping hand"])}
       </Modal>
     </>
   );
