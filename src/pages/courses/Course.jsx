@@ -125,6 +125,7 @@ const Courses = () => {
                 height: "50px",
                 display: "inline-block",
                 verticalAlign: "middle",
+                margin: '0 10px'
               }}
             >
               <img
