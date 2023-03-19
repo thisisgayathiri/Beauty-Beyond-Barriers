@@ -15,7 +15,7 @@ const courses = [
     {
         "id": 3,
         "name": "Autism Awarness",
-        "image": "/images/courses/autismawareness.jpg",
+        "image": "/images/courses/autism.jpg",
         "completed": "10"
     },
     {
@@ -27,31 +27,31 @@ const courses = [
     {
         "id": 5,
         "name": "Disability inclusion",
-        "image": "/images/courses/support.jpeg",
+        "image": "/images/courses/1.jpg",
         "completed": "3"
     },
     {
         "id": 6,
         "name": "Disability awareness",
-        "image": "/images/courses/support.jpeg",
+        "image": "/images/courses/2.jpg",
         "completed": "5"
     },
     {
         "id": 7,
         "name": "Disability etiquette",
-        "image": "/images/courses/support.jpeg",
+        "image": "/images/courses/3.jpg",
         "completed": "5"
     },
     {
         "id": 8,
         "name": "Etiquette: Interacting with People with Disabilities",
-        "image": "/images/courses/support.jpeg",
+        "image": "/images/courses/1.jpg",
         "completed": "5"
     },
     {
         "id": 9,
         "name": "Types of disabilities and hidden disabilities",
-        "image": "/images/courses/support.jpeg",
+        "image": "/images/courses/ot.jpeg",
         "completed": "5"
     },
 ]
