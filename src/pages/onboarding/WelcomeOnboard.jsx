@@ -65,7 +65,7 @@ const WelcomeOnboard = () => {
                 color: COLORS.SECONDARY,
               }}
             >
-              Beauty beyond barriers
+              beauty beyond barriers
             </Title>
           </Row>
 
@@ -79,7 +79,7 @@ const WelcomeOnboard = () => {
                 fontWeight: 500,
               }}
             >
-              Discover beauty services and professionals near you
+              Beauty for every need, every day.
             </Title>
           </Row>
 
