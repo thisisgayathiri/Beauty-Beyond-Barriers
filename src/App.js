@@ -16,6 +16,7 @@ import StylistProfile from "./pages/stylist/StylistProfile";
 import Courses from "./pages/courses/Course";
 import CourseDetails from "./pages/courses/CourseDetails";
 import Welcome from "./pages/courses/Welcome";
+import Call from "./pages/call/Call";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/salons" element={<SalonsList />} />
             <Route path="/stylists" element={<StylistsList />} />
             <Route path="/profile-stylist" element={<StylistProfile />} />
+            <Route path="/call" element={<Call/>} />
 
             <Route path="/chat" element={<ChatWindow />} />
             <Route path="/confirmation" element={<Confirmation />} />
