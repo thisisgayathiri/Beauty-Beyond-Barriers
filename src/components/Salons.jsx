@@ -1,24 +1,31 @@
 import Card from "antd/es/card/Card";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import salons from "../data/salons";
 
 const Salons = () => {
   const salonCard = _.map(salons, (salon) => {
     return (
       <>
-        <Card
-          hoverable
-          style={{ width: "200px", display: "inline-block", margin: "0 10px" }}
-          cover={<img alt="salon" src={salon.image} />}
-        >
-          <span
+        <NavLink to="/profile-salon">
+          <Card
+            hoverable
             style={{
-              padding: "10px 10px",
+              width: "200px",
+              display: "inline-block",
+              margin: "0 10px",
             }}
+            cover={<img alt="salon" src={salon.image} />}
           >
-            {salon.name}
-          </span>
-        </Card>
+            <span
+              style={{
+                padding: "10px 10px",
+              }}
+            >
+              {salon.name}
+            </span>
+          </Card>
+        </NavLink>
       </>
     );
   });

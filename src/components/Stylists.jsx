@@ -1,11 +1,13 @@
 import Card from "antd/es/card/Card";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import stylists from "../data/stylists";
 
 const Stylists = () => {
   const salonCard = _.map(stylists, (stylist) => {
     return (
       <>
+      <NavLink to='/profile-stylist'>
         <Card
           hoverable
           style={{ width: "200px", display: "inline-block", margin: "0 10px" }}
@@ -33,6 +35,7 @@ const Stylists = () => {
             {stylist.name}
           </span>
         </Card>
+        </NavLink>
       </>
     );
   });
