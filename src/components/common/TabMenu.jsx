@@ -1,5 +1,5 @@
 import { Affix, Tabs } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppstoreTwoTone,
   HeartTwoTone,
@@ -12,6 +12,12 @@ import ProfileBooking from "../stylist-profile/ProfileBooking";
 import ProfileAbout from "../stylist-profile/ProfileAbout";
 
 const TabMenu = ({ menuItems, type, isFixed = true, activeIndex = "1" }) => {
+  const [activeKey, setActiveKey] = useState(activeIndex)
+
+  useEffect(() => {
+    setActiveKey(activeIndex)
+  }, [activeIndex])
+
   const getIcon = (icon) => {
     if (_.isEqual(icon, "explore"))
       return <AppstoreTwoTone twoToneColor={COLORS.PRIMARY} />;
@@ -30,6 +36,7 @@ const TabMenu = ({ menuItems, type, isFixed = true, activeIndex = "1" }) => {
 
   const onTabClick = (key) => {
     activeIndex = key;
+    setActiveKey(key)
   };
 
   const tabs = (
@@ -40,8 +47,8 @@ const TabMenu = ({ menuItems, type, isFixed = true, activeIndex = "1" }) => {
         padding: "0px 20px",
         alignItems: "center",
       }}
-      defaultActiveKey={activeIndex}
-      activeKey={activeIndex}
+      defaultActiveKey={activeKey}
+      activeKey={activeKey}
       onTabClick={onTabClick}
       items={menuItems.map(({ name, icon, id }) => {
         return {
