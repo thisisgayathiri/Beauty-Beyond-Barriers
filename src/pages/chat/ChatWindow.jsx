@@ -17,68 +17,68 @@ function ChatWindow() {
 
   return (
     <div>
-      <div class="container clearfix">
-        <div class="chat">
-          <div class="chat-header clearfix">
+      <div className="container clearfix">
+        <div className="chat">
+          <div className="chat-header clearfix">
             <img
               src="/images/stylists/1.jpg"
               style={{width: "50px"}}
               alt="avatar"
             />
 
-            <div class="chat-about">
-              <div class="chat-with" style={{paddingTop: "10px"}}>Alessandra Fadel</div>
+            <div className="chat-about">
+              <div className="chat-with" style={{paddingTop: "10px"}}>Alessandra Fadel</div>
             </div>
-            <i class="fa fa-star"></i>
+            <i className="fa fa-star"></i>
           </div>
 
-          <div class="chat-history">
+          <div className="chat-history">
             <ul>
-              <li class="clearfix">
-                <div class="message-data align-right">
-                  <span class="message-data-time">10:10 AM, Today</span> &nbsp;
+              <li className="clearfix">
+                <div className="message-data align-right">
+                  <span className="message-data-time">10:10 AM, Today</span> &nbsp;
                   &nbsp;
-                  <span class="message-data-name">Alessandra Fadel</span>{" "}
-                  <i class="fa fa-circle me"></i>
+                  <span className="message-data-name">Alessandra Fadel</span>{" "}
+                  <i className="fa fa-circle me"></i>
                 </div>
-                <div class="message other-message float-right">
+                <div className="message other-message float-right">
                   Good Morning Sandra, How may I help you?
                 </div>
               </li>
 
               <li>
-                <div class="message-data">
-                  <span class="message-data-name">
-                    <i class="fa fa-circle online"></i>Sandra
+                <div className="message-data">
+                  <span className="message-data-name">
+                    <i className="fa fa-circle online"></i>Sandra
                   </span>
-                  <span class="message-data-time">10:12 AM, Today</span>
+                  <span className="message-data-time">10:12 AM, Today</span>
                 </div>
-                <div class="message my-message">
+                <div className="message my-message">
                   Good Morning! I am looking for a new hair cut that suits me.
                   Do you have any suggestions?
                 </div>
               </li>
 
-              <li class="clearfix">
-                <div class="message-data align-right">
-                  <span class="message-data-time">10:14 AM, Today</span> &nbsp;
+              <li className="clearfix">
+                <div className="message-data align-right">
+                  <span className="message-data-time">10:14 AM, Today</span> &nbsp;
                   &nbsp;
-                  <span class="message-data-name">Alessandra Fadel</span>{" "}
-                  <i class="fa fa-circle me"></i>
+                  <span className="message-data-name">Alessandra Fadel</span>{" "}
+                  <i className="fa fa-circle me"></i>
                 </div>
-                <div class="message other-message float-right">
+                <div className="message other-message float-right">
                   Do you have a certain look in your mind?
                 </div>
               </li>
 
               <li>
-                <div class="message-data">
-                  <span class="message-data-name">
-                    <i class="fa fa-circle online"></i> Sandra
+                <div className="message-data">
+                  <span className="message-data-name">
+                    <i className="fa fa-circle online"></i> Sandra
                   </span>
-                  <span class="message-data-time">10:16 AM, Today</span>
+                  <span className="message-data-time">10:16 AM, Today</span>
                 </div>
-                <div class="message my-message">
+                <div className="message my-message">
                   Yes. I prefer laser cut. The present muchroom cut does not
                   allow me to make a french plait or french roll.
                 </div>
@@ -86,30 +86,30 @@ function ChatWindow() {
 
               {text == "" ? null : (
                 <li>
-                  <div class="message-data">
-                    <span class="message-data-name">
-                      <i class="fa fa-circle online"></i> Sandra
+                  <div className="message-data">
+                    <span className="message-data-name">
+                      <i className="fa fa-circle online"></i> Sandra
                     </span>
-                    <span class="message-data-time">10:18 AM, Today</span>
+                    <span className="message-data-time">10:18 AM, Today</span>
                   </div>
-                  <div class="message my-message">{text}</div>
+                  <div className="message my-message">{text}</div>
                 </li>
               )}
 
-              <div class="loading">
+              <div className="loading">
                 Alessandra Fadel is typing
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
 
-              <i class="fa fa-circle online"></i>
+              <i className="fa fa-circle online"></i>
               <span className=" online" style={{ color: "#AED2A6" }}></span>
               <span className=" online" style={{ color: "#DAE9DA" }}></span>
             </ul>
           </div>
 
-          <div class="chat-message clearfix">
+          <div className="chat-message clearfix">
             <textarea
               onChange={handleChange}
               value={message}

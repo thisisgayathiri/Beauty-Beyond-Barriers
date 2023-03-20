@@ -6,13 +6,13 @@ const CustomRibbon = ({ children, text, color }) => {
   return (
     <>
       <div
-        class="custom-ant-ribbon ant-ribbon-placement-end"
+        className="custom-ant-ribbon ant-ribbon-placement-end"
         style={{
           color,
           backgroundColor: color,
         }}
       >
-        <span class="ant-ribbon-text" style={{
+        <span className="ant-ribbon-text" style={{
           color: COLORS.WHITE
         }}>{text}</span>
       </div>
