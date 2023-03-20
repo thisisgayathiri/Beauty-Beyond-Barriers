@@ -34,6 +34,19 @@ const ProfileBooking = () => {
 
   return (
     <>
+      <Row justify={'left'}>
+        <Title
+          style={{
+            padding: "0 0 0 0",
+            color: COLORS.SECONDARY,
+            marginLeft: "10px",
+            textAlign: "left",
+          }}
+          level={5}
+        >
+          Date of appointment
+        </Title>
+      </Row>
       <Row justify={"center"}>
         <Col span={22}>
           <MyDatePicker

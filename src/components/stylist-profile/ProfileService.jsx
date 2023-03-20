@@ -58,12 +58,11 @@ const ProfileService = () => {
             level={5}
             style={{
               color: COLORS.SECONDARY,
-              fontWeight: 500,
               textAlign: "left",
               marginLeft: "30px",
             }}
           >
-            Choose the services you're interested in
+            Choose all services you're interested in
           </Title>
         </Col>
       </Row>
