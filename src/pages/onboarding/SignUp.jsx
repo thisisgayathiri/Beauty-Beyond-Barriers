@@ -6,6 +6,7 @@ import SubTitleHeader from "../../components/common/SubTitleHeader";
 import TitleHeader from "../../components/common/TitleHeader";
 import TitlePreviousPage from "../../components/common/TitlePreviousPage";
 import "./Signup.css";
+import SpeechRecognizer from "../../components/speech/SpeechRecognizer";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ const SignUp = () => {
           </Button>
         </Form.Item>
       </Form>
+      <SpeechRecognizer/>
     </div>
   );
 };

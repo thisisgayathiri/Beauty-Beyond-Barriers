@@ -7,6 +7,7 @@ import SubTitleHeader from "../../components/common/SubTitleHeader";
 
 import TitleHeader from "../../components/common/TitleHeader";
 import TitlePreviousPage from "../../components/common/TitlePreviousPage";
+import SpeechRecognizer from "../../components/speech/SpeechRecognizer";
 
 const UserPreferences = () => {
   const navigate = useNavigate();
@@ -26,6 +27,10 @@ const UserPreferences = () => {
       <SubTitleHeader subTitle="And we'll help you find best services near you" />
 
       <Preferences />
+
+      <div>
+      <SpeechRecognizer />
+      </div>
 
       <Button
         onClick={savePreferences}
@@ -48,6 +53,8 @@ const UserPreferences = () => {
       >
         Save preferences
       </Button>
+
+    
     </div>
   );
 };

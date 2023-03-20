@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import SpeechRecognition from "react-speech-recognition";
 import { useSpeechRecognition } from "react-speech-recognition";
 
-const SpeechRecognizerWhite = () => {
+const SpeechRecognizer = () => {
   const navigate = useNavigate();
   Modal.setAppElement("#root");
 
@@ -56,8 +56,7 @@ const SpeechRecognizerWhite = () => {
       <img
         onClick={openModal}
         style={{ position: "fixed", bottom: "1%", right: "5%" }}
-        src="/images/mic.svg"
-        alt='mic'
+        src="/images/mic1.svg"
       />
 
       <Modal
@@ -81,7 +80,7 @@ const SpeechRecognizerWhite = () => {
         <div style={{ display: transcript != "" ? "" : "none" }}>
           <img
             onClick={openModal}
-            alt='mic'
+
             src="/images/mic.svg"
           />
         </div>
@@ -92,4 +91,4 @@ const SpeechRecognizerWhite = () => {
     </div>
   );
 };
-export default SpeechRecognizerWhite;
+export default SpeechRecognizer;
