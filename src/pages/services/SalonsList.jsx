@@ -26,6 +26,7 @@ const SalonsList = () => {
 
   const salonsCard = _.map(salons, (s) => {
     return (
+      <NavLink to="/profile-salon">
       <Card cover={<img alt="salon" src={s.image} />}>
         <div className="card-text-wrapper">
           <Row>
@@ -65,6 +66,7 @@ const SalonsList = () => {
           </Row>
         </div>
       </Card>
+      </NavLink>
     );
   });
 
