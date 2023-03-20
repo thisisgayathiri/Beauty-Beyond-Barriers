@@ -57,6 +57,7 @@ const SpeechRecognizer = () => {
         onClick={openModal}
         style={{ position: "fixed", bottom: "1%", right: "5%" }}
         src="/images/mic.svg"
+        alt='mic'
       />
 
       <Modal
@@ -80,7 +81,7 @@ const SpeechRecognizer = () => {
         <div style={{ display: transcript != "" ? "" : "none" }}>
           <img
             onClick={openModal}
-
+            alt='mic'
             src="/images/mic.svg"
           />
         </div>

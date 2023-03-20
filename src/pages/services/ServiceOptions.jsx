@@ -40,6 +40,7 @@ const ServiceOptions = ({}) => {
               borderColor: item.isSelected ? "darkgray" : "",
             }}
             cover={<img
+            alt='service-logo'
               style={{ width: "50px", margin: '10px 0 0 0',  textAlign: 'center', }}
               src={item.image}
             ></img>}

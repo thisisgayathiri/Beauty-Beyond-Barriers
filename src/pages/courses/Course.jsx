@@ -226,7 +226,7 @@ const Courses = () => {
                 src="/images/ally-badge.png"
                 width={"100%"}
                 height={"100%"}
-                alt=""
+                alt="ally-badge"
               />
             </div>
           </Col>

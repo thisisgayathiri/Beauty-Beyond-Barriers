@@ -16,7 +16,7 @@ const LandingPage = () => {
       >
         <Layout>
           <Content style={{ backgroundColor: "white" }}>
-            <img width={"30%"} src={require("../../images/build.png")} />
+            <img width={"30%"} src={require("../../images/build.png")} alt='build-image'/>
             <Row justify={"center"}>
               <Title>We're still building for web!</Title>
             </Row>

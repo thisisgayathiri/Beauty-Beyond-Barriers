@@ -34,7 +34,7 @@ const UserPreferences = () => {
         style={{
           marginTop: "20px",
           backgroundColor: COLORS.PRIMARY,
-          color: COLORS.PRIMARY_LIGHT,
+          color: COLORS.SECONDARY,
           fontWeight: 500,
           borderColor: COLORS.PRIMARY_LIGHT,
 
